@@ -25,8 +25,7 @@ FORMATOS COMPATIBLES
 
 SEGURIDAD
 - No realiza seguimiento de los usuarios,
-- La extensión no recopila ni transmite datos,
-- Los clics, las entradas de teclado y los ajustes se guardan localmente en el navegador.
+- No recopila ni transmite datos.
 
 IDIOMAS DE LA INTERFAZ
 Inglés, francés, alemán, español, ruso, árabe, chino simplificado.

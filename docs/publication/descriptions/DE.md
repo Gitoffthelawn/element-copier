@@ -24,9 +24,8 @@ UNTERSTÜTZTE FORMATE
    - QA-Details für Fehlerberichte.
 
 SICHERHEIT
-- Sie verfolgt keine Benutzer,
-- Die Erweiterung erfasst und überträgt keine Daten,
-- Klicks, Tastatureingaben und Einstellungen werden lokal im Browser gespeichert.
+- Verfolgt keine Benutzer,
+- Erfasst und überträgt keine Daten.
 
 OBERFLÄCHENSPRACHEN
 Englisch, Französisch, Deutsch, Spanisch, Russisch, Arabisch, vereinfachtes Chinesisch.

@@ -25,8 +25,7 @@ SUPPORTED FORMATS
 
 SECURITY
 - Does not track users,
-- The extension does not collect or transmit data,
-- Clicks, keyboard input, and settings are stored locally in the browser.
+- Does not collect or transmit data.
 
 INTERFACE LANGUAGES
 English, French, German, Spanish, Russian, Arabic, Simplified Chinese.

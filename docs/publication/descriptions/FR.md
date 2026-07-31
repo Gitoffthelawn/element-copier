@@ -24,9 +24,8 @@ FORMATS PRIS EN CHARGE
    - Détails QA pour les rapports de bugs.
 
 SÉCURITÉ
-- Elle ne suit pas les utilisateurs,
-- L'extension ne collecte ni ne transmet de données,
-- Les clics, les saisies au clavier et les paramètres sont enregistrés localement dans le navigateur.
+- Ne suit pas les utilisateurs,
+- Ne collecte ni ne transmet de données.
 
 LANGUES DE L'INTERFACE
 Anglais, français, allemand, espagnol, russe, arabe, chinois simplifié.
