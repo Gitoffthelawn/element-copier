@@ -93,7 +93,7 @@ var FR_MESSAGES = {
     "Sélecteurs de code : sélecteur, chemin JS, XPath, XPath complet",
     "Styles de code : déclarés, calculés",
     "Détails QA pour les rapports de bugs",
-    "N'utilise pas le réseau",
+    "Ne transmet pas de données",
     "Ne collecte pas de données",
     "Code sur GitHub",
     "Crédits (MIT) : Lucide, Modern-Screenshot, Turndown"

@@ -100,7 +100,7 @@ var EN_MESSAGES = {
     "Code selectors: selector, JS path, XPath, full XPath",
     "Code styles: declared, computed",
     "QA details for bug reports",
-    "Doesn't use the network",
+    "Doesn't transmit data",
     "Doesn't collect data",
     "Code on GitHub",
     "Credits (MIT): Lucide, Modern-Screenshot, Turndown"

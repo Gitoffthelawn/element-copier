@@ -24,7 +24,6 @@ FORMATS PRIS EN CHARGE
    - Détails QA pour les rapports de bugs.
 
 SÉCURITÉ
-- L'extension n'accède pas à Internet,
 - Elle n'envoie aucune donnée.
 
 LANGUES DE L'INTERFACE

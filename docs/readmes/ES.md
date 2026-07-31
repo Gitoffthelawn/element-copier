@@ -77,7 +77,7 @@ Para desarrolladores y testers: URL, código HTML, tag#id.class, selectores CSS,
 
 - No se recopilan datos
 - Sin seguimiento
-- Sin solicitudes de red
+- Sin transmisión de datos
 - El contenido de la página se procesa localmente en el navegador
 
 ## LIMITACIONES

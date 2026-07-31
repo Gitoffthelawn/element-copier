@@ -77,7 +77,7 @@ Für Entwickler und Tester: URLs, HTML-Code, tag#id.class, CSS-Selektoren, JS-Pf
 
 - Keine Datenerfassung
 - Kein Tracking
-- Keine Netzwerkanfragen
+- Keine Datenübertragung
 - Seiteninhalte werden lokal im Browser verarbeitet
 
 ## EINSCHRÄNKUNGEN

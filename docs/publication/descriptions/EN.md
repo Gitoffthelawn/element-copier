@@ -24,7 +24,6 @@ SUPPORTED FORMATS
    - QA details for bug reports.
 
 SECURITY
-- The extension does not access the internet,
 - It does not send any data anywhere.
 
 INTERFACE LANGUAGES

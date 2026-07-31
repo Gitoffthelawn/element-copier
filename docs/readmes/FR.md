@@ -77,7 +77,7 @@ Pour les développeurs et les testeurs : URL, code HTML, tag#id.class, sélecteu
 
 - Aucune collecte de données
 - Aucun suivi
-- Aucune requête réseau
+- Aucune transmission de données
 - Le contenu des pages est traité localement dans le navigateur
 
 ## LIMITATIONS

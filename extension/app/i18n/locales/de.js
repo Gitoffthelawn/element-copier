@@ -93,7 +93,7 @@ var DE_MESSAGES = {
     "Code-Selektoren: Selektor, JS-Pfad, XPath, vollständiger XPath",
     "Code-Stile: deklariert, berechnet",
     "QA-Details für Fehlerberichte",
-    "Nutzt kein Netzwerk",
+    "Überträgt keine Daten",
     "Sammelt keine Daten",
     "Code auf GitHub",
     "Danksagung (MIT): Lucide, Modern-Screenshot, Turndown"

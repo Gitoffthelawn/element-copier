@@ -93,7 +93,7 @@ var ES_MESSAGES = {
     "Selectores de código: selector, ruta JS, XPath, XPath completo",
     "Estilos de código: declarados, calculados",
     "Detalles de QA para informes de errores",
-    "No usa la red",
+    "No transmite datos",
     "No recopila datos",
     "Código en GitHub",
     "Créditos (MIT): Lucide, Modern-Screenshot, Turndown"

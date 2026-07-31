@@ -24,7 +24,6 @@ UNTERSTÜTZTE FORMATE
    - QA-Details für Fehlerberichte.
 
 SICHERHEIT
-- Die Erweiterung greift nicht auf das Internet zu,
 - Sie sendet keine Daten irgendwohin.
 
 OBERFLÄCHENSPRACHEN

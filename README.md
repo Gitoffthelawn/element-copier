@@ -79,7 +79,7 @@ For developers and testers: URLs, HTML code, tag#id.class, CSS selectors, JS pat
 
 - No data collection
 - No tracking
-- No network requests
+- No data transmission
 - Page content is processed locally in the browser
 
 ## LIMITATIONS

@@ -24,7 +24,6 @@ FORMATOS COMPATIBLES
    - Detalles de QA para informes de errores.
 
 SEGURIDAD
-- La extensión no accede a Internet,
 - No envía ningún dato a ningún sitio.
 
 IDIOMAS DE LA INTERFAZ
