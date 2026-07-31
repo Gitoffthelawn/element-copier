@@ -6,6 +6,10 @@ Regular SemVer logic.
 
 ## RELEASES
 
+### Unreleased
+- Asks for page access only when you start the extension, instead of all websites upfront
+- Removed the Shortcuts page and public hotkey documentation; shortcuts remain available as a hidden capability
+
 ### 1.3.2
 - Updated product descriptions and localized README copy for everyday and professional use cases
 
