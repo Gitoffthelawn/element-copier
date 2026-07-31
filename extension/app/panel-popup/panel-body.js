@@ -1,4 +1,3 @@
-import { ABOUT_PREFIX_CHORD_MAC_DISPLAY, ABOUT_PREFIX_CHORD_WIN_DISPLAY, getStartHotkeyActionLabel } from "../hotkeys/keys.js";
 import { ABOUT_SECTION_ICONS } from "../icons.js";
 import { COPY_FORMATS } from "../formats/definitions.js";
 import { buildAboutListItems } from "../about.js";
@@ -36,76 +35,6 @@ function createAboutIcon(iconHtml) {
   mark.setAttribute("aria-hidden", "true");
   mark.innerHTML = iconHtml;
   return mark;
-}
-
-function createKbd(text) {
-  const kbd = document.createElement("kbd");
-  kbd.className = "ec-about-kbd";
-  kbd.textContent = text;
-  return kbd;
-}
-
-var SHORTCUTS_STEP_RELEASE_EMPHASIS = "Release";
-
-function appendShortcutsStepRelease(step, text) {
-  if (text.startsWith(SHORTCUTS_STEP_RELEASE_EMPHASIS)) {
-    const emphasis = document.createElement("span");
-    emphasis.className = "ec-shortcuts-step-emphasis";
-    emphasis.textContent = SHORTCUTS_STEP_RELEASE_EMPHASIS;
-    step.append(emphasis, document.createTextNode(text.slice(SHORTCUTS_STEP_RELEASE_EMPHASIS.length)));
-    return;
-  }
-  step.textContent = text;
-}
-
-function createShortcutsSectionDivider() {
-  const divider = document.createElement("div");
-  divider.className = "dd-panel-divider ec-shortcuts-divider";
-  divider.setAttribute("aria-hidden", "true");
-  return divider;
-}
-
-function buildShortcutsSteps(strings) {
-  const steps = document.createElement("ol");
-  steps.className = "ec-shortcuts-steps";
-  const step1 = document.createElement("li");
-  step1.className = "ec-shortcuts-step--press";
-  const pressGrid = document.createElement("div");
-  pressGrid.className = "ec-shortcuts-step-press-grid";
-  const pressLabel = document.createElement("span");
-  pressLabel.className = "ec-shortcuts-step-press-label";
-  pressLabel.textContent = strings.shortcutsStepPress;
-  const pressChords = document.createElement("div");
-  pressChords.className = "ec-shortcuts-step-press-chords";
-  pressChords.append(createKbd(ABOUT_PREFIX_CHORD_WIN_DISPLAY));
-  const pressMacLabel = document.createElement("span");
-  pressMacLabel.className = "ec-shortcuts-step-press-mac-label";
-  pressMacLabel.textContent = strings.shortcutsStepOnMac;
-  const pressMacChords = document.createElement("div");
-  pressMacChords.className = "ec-shortcuts-step-press-mac-chords";
-  pressMacChords.append(createKbd(ABOUT_PREFIX_CHORD_MAC_DISPLAY));
-  pressGrid.append(pressLabel, pressChords, pressMacLabel, pressMacChords);
-  step1.append(pressGrid);
-  const step2 = document.createElement("li");
-  appendShortcutsStepRelease(step2, strings.shortcutsStepRelease);
-  const step3 = document.createElement("li");
-  step3.append(
-    document.createTextNode(`${strings.shortcutsStepThenPress} `),
-    createKbd(getStartHotkeyActionLabel())
-  );
-  steps.append(step1, step2, step3);
-  return steps;
-}
-
-function createShortcutsWholePageLine(strings) {
-  const line = document.createElement("p");
-  line.className = "ec-shortcuts-note";
-  line.append(
-    strings.shortcutsWholePageBefore,
-    createKbd(getStartHotkeyActionLabel()),
-    strings.shortcutsWholePageAfter
-  );
-  return line;
 }
 
 function createAboutCredit(strings) {
@@ -275,43 +204,6 @@ function buildAboutPanelBody(body, strings) {
   void readSupportSurveyState().then((state) => {
     if (statisticText) statisticText.textContent = strings.aboutCopiedElements.replace("{count}", String(state.actionCount));
   });
-  body.append(page);
-}
-
-function buildShortcutsPanelBody(body, strings) {
-  body.replaceChildren();
-  const page = document.createElement("div");
-  page.className = "ec-panel-page ec-panel-page--shortcuts";
-  const title = document.createElement("h2");
-  title.className = "ec-panel-page-title";
-  title.textContent = strings.tabShortcuts;
-  const runStopHeading = document.createElement("p");
-  runStopHeading.className = "ec-shortcuts-heading";
-  runStopHeading.textContent = strings.shortcutsRunStopHeading;
-  const stopLine = document.createElement("p");
-  stopLine.className = "ec-shortcuts-stop";
-  const stopLabel = document.createElement("strong");
-  stopLabel.textContent = strings.shortcutsStopHeading;
-  stopLine.append(stopLabel, " ", createKbd("Esc"));
-  const safetyLine1 = document.createElement("p");
-  safetyLine1.className = "ec-shortcuts-note";
-  safetyLine1.textContent = strings.shortcutsSafetyLine1;
-  const safetyLine2 = document.createElement("p");
-  safetyLine2.className = "ec-shortcuts-note";
-  safetyLine2.textContent = strings.shortcutsSafetyLine2;
-  page.append(
-    title,
-    createPageDivider(),
-    runStopHeading,
-    buildShortcutsSteps(strings),
-    safetyLine1,
-    safetyLine2,
-    createShortcutsSectionDivider(),
-    createShortcutsWholePageLine(strings),
-    createShortcutsSectionDivider(),
-    stopLine,
-    createShortcutsSectionDivider()
-  );
   body.append(page);
 }
 
@@ -565,4 +457,4 @@ async function buildCopiedPanelBody(body, strings, actions = {}) {
   body.append(page);
 }
 
-export { COPIED_HEIGHT_PROBE_PREVIEW, PANEL_BODY_CENTERED_CLASS, SHORTCUTS_STEP_RELEASE_EMPHASIS, appendShortcutsStepRelease, buildAboutPanelBody, buildCopiedEmptyPanelBody, buildCopiedHeightProbeCacheRecord, buildCopiedPanelBody, buildCopiedPanelBodyForHeightProbe, buildLoadingPanelBody, buildSettingsPanelBody, buildShortcutsPanelBody, buildShortcutsSteps, buildStartPanelBody, copiedFormatLabel, copiedSubtitleVisible, createAboutCredit, createAboutIcon, createCopiedAgainBlock, createCopiedPageHeader, createKbd, createPageDivider, createSettingsSectionDivider, createShortcutsSectionDivider, createShortcutsWholePageLine, openCachedUrlFromPanel, updateCopiedPageSubtitle };
+export { COPIED_HEIGHT_PROBE_PREVIEW, PANEL_BODY_CENTERED_CLASS, buildAboutPanelBody, buildCopiedEmptyPanelBody, buildCopiedHeightProbeCacheRecord, buildCopiedPanelBody, buildCopiedPanelBodyForHeightProbe, buildLoadingPanelBody, buildSettingsPanelBody, buildStartPanelBody, copiedFormatLabel, copiedSubtitleVisible, createAboutCredit, createAboutIcon, createCopiedAgainBlock, createCopiedPageHeader, createPageDivider, createSettingsSectionDivider, openCachedUrlFromPanel, updateCopiedPageSubtitle };

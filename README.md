@@ -47,7 +47,6 @@ For developers and testers: URLs, HTML code, tag#id.class, CSS selectors, JS pat
 - Keep the latest copied content for all enabled formats
 - Copy content to the clipboard or download it as a file
 - Use a configurable default action for faster repeated copying
-- Keyboard shortcuts
 - Light and dark themes
 - Flexible settings
 - Interface available in English, French, German, Spanish, Russian, Arabic, and Simplified Chinese
@@ -73,7 +72,6 @@ For developers and testers: URLs, HTML code, tag#id.class, CSS selectors, JS pat
 ### Product notes
 
 - Rich-text formatting is designed to produce a better result than basic copy and paste
-- Keyboard shortcuts combined with a default action reduce the number of steps for repeated copying
 - Developer formats make common inspection data available without opening DevTools
 - Markdown processing preserves layout, links, and content images where possible, including converted SVG images
 

@@ -361,53 +361,6 @@ export const PANEL_CSS = `.ec-panel-header,
   text-align: left;
 }
 
-.ec-panel-page--shortcuts {
-  width: 100%;
-}
-
-.ec-shortcuts-heading {
-  margin: 0.5rem 0 0;
-  font-size: 0.84rem;
-  line-height: 1.45;
-  font-weight: 700;
-  color: #374151;
-}
-
-.ec-shortcuts-stop {
-  margin: 0.5rem 0 0;
-  font-size: 0.84rem;
-  line-height: 1.45;
-  color: #374151;
-}
-
-.ec-shortcuts-stop strong {
-  font-weight: 700;
-}
-
-.ec-shortcuts-note {
-  margin: 0.2rem 0 0;
-  font-size: 0.84rem;
-  line-height: 1.45;
-  color: #6b7280;
-}
-
-.ec-shortcuts-steps + .ec-shortcuts-note {
-  margin-top: 0.65rem;
-}
-
-.ec-shortcuts-divider {
-  width: 100%;
-  height: 0;
-  margin: 0.7rem 0 0.5rem;
-  border: 0;
-  border-top: 1px solid rgba(1, 34, 146, 0.14);
-  background: transparent;
-}
-
-.ec-shortcuts-stop + .ec-shortcuts-divider {
-  margin-top: 0.5rem;
-}
-
 /* Match the welcome page's 12px gap between the header and divider. */
 .ec-panel > .dd-panel-divider {
   margin-top: 0.75rem;
@@ -1659,7 +1612,6 @@ export const PANEL_CSS = `.ec-panel-header,
   display: block;
 }
 
-.ec-shortcuts-steps,
 .ec-about-steps {
   margin: 0.2rem 0 0;
   padding-left: 1.15rem;
@@ -1669,21 +1621,14 @@ export const PANEL_CSS = `.ec-panel-header,
   text-align: left;
 }
 
-.ec-shortcuts-steps li,
 .ec-about-steps li {
   margin-bottom: 0.2rem;
 }
 
-.ec-shortcuts-steps li:last-child,
 .ec-about-steps li:last-child {
   margin-bottom: 0;
 }
 
-.ec-shortcuts-step-emphasis {
-  font-weight: 600;
-}
-
-.ec-shortcuts-step-press-grid,
 .ec-about-step-press-grid {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -1691,26 +1636,22 @@ export const PANEL_CSS = `.ec-panel-header,
   align-items: start;
 }
 
-.ec-shortcuts-step-press-label,
 .ec-about-step-press-label {
   grid-column: 1;
   grid-row: 1;
 }
 
-.ec-shortcuts-step-press-chords,
 .ec-about-step-press-chords {
   grid-column: 2;
   grid-row: 1;
   min-width: 0;
 }
 
-.ec-shortcuts-step-press-mac-label,
 .ec-about-step-press-mac-label {
   grid-column: 1;
   grid-row: 2;
 }
 
-.ec-shortcuts-step-press-mac-chords,
 .ec-about-step-press-mac-chords {
   grid-column: 2;
   grid-row: 2;
@@ -1806,9 +1747,6 @@ export const PANEL_CSS = `.ec-panel-header,
 
 :host(.ec-panel-popup--dark) .ec-panel-page-text,
 :host(.ec-panel-popup--dark) .ec-loading-label,
-:host(.ec-panel-popup--dark) .ec-shortcuts-heading,
-:host(.ec-panel-popup--dark) .ec-shortcuts-stop,
-:host(.ec-panel-popup--dark) .ec-shortcuts-steps,
 :host(.ec-panel-popup--dark) .ec-copy-default-label,
 :host(.ec-panel-popup--dark) .ec-toggle-label,
 :host(.ec-panel-popup--dark) .ec-format-field-label,
@@ -1821,7 +1759,6 @@ export const PANEL_CSS = `.ec-panel-header,
   color: #d1d5db;
 }
 
-:host(.ec-panel-popup--dark) .ec-shortcuts-note,
 :host(.ec-panel-popup--dark) .ec-copied-empty-text,
 :host(.ec-panel-popup--dark) .ec-copied-subtitle-what--nothing,
 :host(.ec-panel-popup--dark) .ec-about-icon,
@@ -1840,7 +1777,6 @@ export const PANEL_CSS = `.ec-panel-header,
   color: #e5e7eb;
 }
 
-:host(.ec-panel-popup--dark) .ec-shortcuts-divider,
 :host(.ec-panel-popup--dark) .ec-settings-section-divider,
 :host(.ec-panel-popup--dark) .ec-copied-block {
   border-top-color: rgba(96, 165, 250, 0.22);

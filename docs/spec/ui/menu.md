@@ -9,12 +9,12 @@
    - play // START -- if the cache is empty
    - files // COPIED -- if the cache is not empty
 - settings // SETTINGS
-- keyboard // SHORTCUTS
 - info // ABOUT
 
 ### Does not contain
 - Welcome
 - Saved
+- keyboard // SHORTCUTS
 
 ---
 

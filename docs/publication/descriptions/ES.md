@@ -5,7 +5,6 @@ FUNCIONES
 - Copiar una página entera o un elemento concreto,
 - Convertir la información en varios formatos a la vez,
 - Guardar el último contenido copiado para todos los formatos,
-- Atajos de teclado,
 - Temas claro y oscuro,
 - Ajustes flexibles.
 
@@ -33,7 +32,6 @@ Inglés, francés, alemán, español, ruso, árabe, chino simplificado.
 
 HECHO CON CARIÑO
 - El formato de texto con esta extensión es mejor que un copiar y pegar simple (no es perfecto, pero es mucho mejor y mucho más cómodo);
-- La combinación de atajos de teclado y una «acción predeterminada» es increíblemente práctica si necesitas copiar muchas cosas; acelera el trabajo y te ahorra nervios;
 - Como desarrollador, he añadido muchas herramientas de copia que ayudan mucho en desarrollo y pruebas. No hace falta abrir las DevTools cada vez. Y si no eres desarrollador y no lo necesitas, desactívalo en los ajustes;
 - Se ha hecho mucho trabajo para Markdown. Incluso las imágenes SVG se convierten y se insertan en el código para que no se pierdan. También hay muchas mejoras para el diseño, los enlaces y mucho más.
 

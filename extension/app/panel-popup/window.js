@@ -1,4 +1,4 @@
-import { PANEL_BODY_CENTERED_CLASS, buildAboutPanelBody, buildCopiedPanelBody, buildLoadingPanelBody, buildSettingsPanelBody, buildShortcutsPanelBody, buildStartPanelBody } from "./panel-body.js";
+import { PANEL_BODY_CENTERED_CLASS, buildAboutPanelBody, buildCopiedPanelBody, buildLoadingPanelBody, buildSettingsPanelBody, buildStartPanelBody } from "./panel-body.js";
 import { PANEL_MENU_TABS } from "./constants.js";
 import { createPanelSurface } from "./build-panel-surface.js";
 import { hasPickCopyCacheInStorage } from "../pick-mode/pick-copy-cache-storage.js";
@@ -11,6 +11,11 @@ import { t } from "../i18n/strings.js";
 
 function isMenuTab(tab) {
   return PANEL_MENU_TABS.includes(tab);
+}
+
+/** SHORTCUTS page removed from UI; deep-links fall back to START. */
+function normalizePanelTab(tab) {
+  return tab === "shortcuts" ? "start" : tab;
 }
 
 var CopierPanelWindow = class {
@@ -86,6 +91,7 @@ var CopierPanelWindow = class {
   }
   async renderTab(tab) {
     if (!this.body) return;
+    tab = normalizePanelTab(tab);
     this.applyLocaleToPanelChrome();
     const strings = t(this.host.getLocale());
     const centered = tab === "start" || tab === "loading";
@@ -117,9 +123,6 @@ var CopierPanelWindow = class {
           getLocale: () => this.host.getLocale(),
           onLocaleSelect: (code) => this.changeSettingsLocale(code)
         });
-        break;
-      case "shortcuts":
-        buildShortcutsPanelBody(this.body, strings);
         break;
       case "about":
         buildAboutPanelBody(this.body, strings);
