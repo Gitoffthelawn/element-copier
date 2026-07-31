@@ -29,9 +29,4 @@ SICHERHEIT
 OBERFLÄCHENSPRACHEN
 Englisch, Französisch, Deutsch, Spanisch, Russisch, Arabisch, vereinfachtes Chinesisch.
 
-MIT LIEBE GEMACHT
-- Die Textformatierung über diese Erweiterung ist besser als einfaches Kopieren und Einfügen (nicht perfekt, aber deutlich besser und deutlich bequemer);
-- Als Entwickler habe ich viele Kopierwerkzeuge hinzugefügt, die bei Entwicklung und Tests sehr hilfreich sind. Sie müssen nicht jedes Mal die DevTools öffnen. Und wenn Sie kein Entwickler sind und das nicht brauchen, schalten Sie es einfach in den Einstellungen ab;
-- Für Markdown wurde viel Arbeit investiert. Selbst SVG-Bilder werden umgewandelt und in den Code eingefügt, damit sie nicht verloren gehen. Außerdem gibt es viele Verbesserungen für Layout, Links und vieles mehr.
-
 Ich hoffe sehr, dass diese Erweiterung für Sie nützlich sein wird 🙌

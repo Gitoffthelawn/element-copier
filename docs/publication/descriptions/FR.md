@@ -29,9 +29,4 @@ SÉCURITÉ
 LANGUES DE L'INTERFACE
 Anglais, français, allemand, espagnol, russe, arabe, chinois simplifié.
 
-FAIT AVEC AMOUR
-- Le formatage du texte via cette extension est meilleur qu'un simple copier-coller (pas parfait, mais bien mieux et bien plus pratique) ;
-- En tant que développeur, j'ai ajouté de nombreux outils de copie très utiles pour le développement et les tests. Pas besoin d'ouvrir les DevTools à chaque fois. Et si vous n'êtes pas développeur et n'en avez pas besoin, désactivez-les simplement dans les paramètres ;
-- Beaucoup de travail a été fait pour le Markdown. Même les images SVG sont converties et insérées dans le code pour ne pas être perdues. Il y a aussi de nombreuses améliorations pour la mise en page, les liens, et bien plus encore.
-
 J'espère vraiment que cette extension vous sera utile 🙌
