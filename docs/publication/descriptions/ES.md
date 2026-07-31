@@ -24,7 +24,9 @@ FORMATOS COMPATIBLES
    - Detalles de QA para informes de errores.
 
 SEGURIDAD
-- No envía ningún dato a ningún sitio.
+- No realiza seguimiento de los usuarios,
+- La extensión no recopila ni transmite datos,
+- Los clics, las entradas de teclado y los ajustes se guardan localmente en el navegador.
 
 IDIOMAS DE LA INTERFAZ
 Inglés, francés, alemán, español, ruso, árabe, chino simplificado.
