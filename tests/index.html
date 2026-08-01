@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" data-test-status="pending">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Extension tests</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: system-ui, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 32px;
+      }
+
+      main {
+        margin: 0 auto;
+        max-width: 760px;
+      }
+
+      #summary {
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      #results {
+        display: grid;
+        gap: 10px;
+        padding: 0;
+        list-style: none;
+      }
+
+      #results li {
+        padding: 12px 14px;
+        border: 1px solid currentColor;
+        border-radius: 8px;
+      }
+
+      #results pre {
+        margin: 8px 0 0;
+        overflow: auto;
+        white-space: pre-wrap;
+      }
+    </style>
+    <script defer src="test-runner.js"></script>
+    <script defer src="unit/test-runner.test.js"></script>
+    <script defer src="integration/dom-events.test.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Extension tests</h1>
+      <p id="summary" role="status" aria-live="polite">Waiting to run…</p>
+      <ol id="results"></ol>
+    </main>
+  </body>
+</html>
