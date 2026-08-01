@@ -20,7 +20,6 @@ var PANEL_MENU_TABS = [
   "start",
   "copied",
   "settings",
-  "shortcuts",
   "about"
 ];
 

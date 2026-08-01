@@ -45,7 +45,6 @@ Para desarrolladores y testers: URL, código HTML, tag#id.class, selectores CSS,
 - Conservar el último contenido copiado para todos los formatos habilitados
 - Copiar contenido al portapapeles o descargarlo como archivo
 - Usar una acción predeterminada configurable para acelerar las copias repetidas
-- Atajos de teclado
 - Temas claro y oscuro
 - Configuración flexible
 - Interfaz disponible en inglés, francés, alemán, español, ruso, árabe y chino simplificado
@@ -71,7 +70,6 @@ Para desarrolladores y testers: URL, código HTML, tag#id.class, selectores CSS,
 ### Notas del producto
 
 - El formato de texto enriquecido está diseñado para ofrecer un resultado mejor que copiar y pegar de forma básica
-- Los atajos de teclado y una acción predeterminada reducen los pasos de las copias repetidas
 - Los formatos para desarrolladores ofrecen datos de inspección habituales sin abrir DevTools
 - El procesamiento de Markdown conserva, cuando es posible, el diseño, los enlaces y las imágenes del contenido, incluidas las imágenes SVG convertidas
 
@@ -79,7 +77,7 @@ Para desarrolladores y testers: URL, código HTML, tag#id.class, selectores CSS,
 
 - No se recopilan datos
 - Sin seguimiento
-- Sin solicitudes de red
+- Sin transmisión de datos
 - El contenido de la página se procesa localmente en el navegador
 
 ## LIMITACIONES

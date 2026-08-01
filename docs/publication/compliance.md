@@ -26,13 +26,17 @@ The `clipboardWrite` permission ensures that a copy action explicitly started by
 
 ## scripting
 
-The `scripting` permission is used solely to inject the extension’s own `content.js` into the active tab when the user turns on copy mode or runs a copy action and the script is not already running in that frame (for example on certain pages or embedded frames), so pick-mode highlighting, element selection, and format extraction can work on the page the user is interacting with.
+The `scripting` permission is used solely to inject the extension’s own page script into the active tab after the user clicks the toolbar icon, uses a registered keyboard command (`_execute_action`, `activate-deactivate`, or `deactivate-copy-mode`), or chooses an item from the extension’s context menu—so pick-mode highlighting, element selection, and format extraction run only on the page the user has just engaged with. The script is not registered for automatic injection on all sites.
 
 ---
 
 ## activeTab
 
-The `activeTab` permission limits access to the tab the user is currently using when they invoke the extension—by clicking the toolbar icon, using a registered keyboard command, or choosing an item from the extension’s context menu—so the extension can read the DOM of that page only at user request to perform copy or download, without broad background access to tabs the user has not engaged with.
+The `activeTab` permission limits access to the tab the user is currently using when they invoke the extension—by clicking the toolbar icon, using a registered keyboard command, or choosing an item from the extension’s context menu—so the extension can inject its page script and read the DOM of that page only at user request to perform copy or download, without broad background access to tabs the user has not engaged with.
+
+Copy and pick mode are available through the toolbar, `_execute_action`, and the user-assignable `activate-deactivate` / `deactivate-copy-mode` commands without requiring a prior content-script inject: those entry points grant `activeTab` and then inject on demand via `scripting`.
+
+The optional in-page prefix chord (Ctrl+Shift+X / ⌘⇧X, release, then C) listens in the page and therefore works only after the content script has been injected on that document (for example after a toolbar click or a browser command on that tab). It cannot run before the first user gesture on a fresh navigation without a host permission such as `<all_urls>`, which this extension does not request. After navigation, a new user gesture is needed before the page-side chord is available again.
 
 ---
 
@@ -44,4 +48,4 @@ The `contextMenus` permission registers menu items on the extension toolbar butt
 
 ## Host permission
 
-Host access (`<all_urls>` via the registered content script) is required because users can copy from any website they open, and the extension must load its page-side code on that origin to support element picking, keyboard shortcuts, and format extraction in the main document and embedded frames (`all_frames`); the script does not run network requests, does not access page data until the user enables copy mode or triggers a copy action, and never sends page content off the device.
+Element Copier does not request host access (`<all_urls>` or equivalent `host_permissions`). Page access is temporary and limited to the active tab after an explicit user action, via `activeTab` plus on-demand `scripting.executeScript`. Published extension resources used by the injected loader are listed under `web_accessible_resources` for `http(s)` and `file` pages only; that listing does not grant the extension standing access to those origins.

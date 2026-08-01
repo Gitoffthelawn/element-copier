@@ -1,4 +1,4 @@
-import { FILES, INFO, KEYBOARD, PLAY, SETTINGS } from "../../lib/vendor/icons/index.js";
+import { FILES, INFO, PLAY, SETTINGS } from "../../lib/vendor/icons/index.js";
 
 var START_ITEM = {
   tab: "start",
@@ -14,7 +14,6 @@ var COPIED_ITEM = {
 
 var SECONDARY_MENU_ITEMS = [
   { tab: "settings", iconSvg: SETTINGS, label: (s) => s.pageSettingsTitle },
-  { tab: "shortcuts", iconSvg: KEYBOARD, label: (s) => s.tabShortcuts },
   { tab: "about", iconSvg: INFO, label: (s) => s.tabAbout }
 ];
 

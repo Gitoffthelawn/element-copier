@@ -276,6 +276,9 @@ async function toggleTab(tabId, windowId, tabUrl, source = "toolbar") {
     await activateTab(tabId, windowId);
     return;
   }
+  // activeTab is granted by the toolbar click; inject so page-side hotkeys work
+  // even when we only open the start panel (pick mode stays off).
+  void injectContent(tabId, MAIN_FRAME_ID);
   openStartPanelFromToolbar({ id: tabId, windowId });
   await deactivateTab(tabId, windowId);
 }
@@ -307,7 +310,8 @@ ext.action.onClicked.addListener((tab) => {
 
 registerBackgroundHotkeys({
   getActiveCommandTab,
-  toggleTab
+  toggleTab,
+  deactivateTab
 });
 
 registerPrefixHintOperabilityListeners({
@@ -319,6 +323,10 @@ ext.contextMenus.onClicked.addListener((info, tab) => {
   const panelTab = findContextMenuTab(info.menuItemId);
   if (panelTab === void 0) return;
   void (async () => {
+    // Context-menu click grants activeTab; inject so page-side hotkeys are ready.
+    if (tab?.id !== void 0) {
+      void injectContent(tab.id, MAIN_FRAME_ID);
+    }
     await syncPickModeForPanelTab(panelTab, { tab });
     openPanelFromSender(panelTab, tab);
   })();

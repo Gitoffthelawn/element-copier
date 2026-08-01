@@ -10,15 +10,12 @@ var CONTEXT_MENU_COPIED = "element-copier-copied";
 
 var CONTEXT_MENU_SETTINGS = "element-copier-settings";
 
-var CONTEXT_MENU_SHORTCUTS = "element-copier-shortcuts";
-
 var CONTEXT_MENU_ABOUT = "element-copier-about";
 
 var ACTION_MENU_EMOJI = {
   start: "▶️",
   copied: "🗂️",
   settings: "⚙️",
-  shortcuts: "⌨️",
   about: "ℹ️"
 };
 
@@ -42,12 +39,6 @@ var CONTEXT_MENU_SECONDARY_ITEMS = [
     tab: "settings",
     emoji: ACTION_MENU_EMOJI.settings,
     title: (strings) => strings.pageSettingsTitle
-  },
-  {
-    id: CONTEXT_MENU_SHORTCUTS,
-    tab: "shortcuts",
-    emoji: ACTION_MENU_EMOJI.shortcuts,
-    title: (strings) => strings.tabShortcuts
   },
   {
     id: CONTEXT_MENU_ABOUT,
@@ -100,4 +91,4 @@ function findContextMenuTab(menuItemId) {
   return CONTEXT_MENU_SECONDARY_ITEMS.find((item) => item.id === menuItemId)?.tab;
 }
 
-export { ACTION_MENU_EMOJI, CONTEXT_MENU_ABOUT, CONTEXT_MENU_COPIED, CONTEXT_MENU_COPIED_ITEM, CONTEXT_MENU_SECONDARY_ITEMS, CONTEXT_MENU_SETTINGS, CONTEXT_MENU_SHORTCUTS, CONTEXT_MENU_START, CONTEXT_MENU_START_ITEM, actionMenuTitle, createContextMenuItem, ensureContextMenu, ensureContextMenuChain, findContextMenuTab };
+export { ACTION_MENU_EMOJI, CONTEXT_MENU_ABOUT, CONTEXT_MENU_COPIED, CONTEXT_MENU_COPIED_ITEM, CONTEXT_MENU_SECONDARY_ITEMS, CONTEXT_MENU_SETTINGS, CONTEXT_MENU_START, CONTEXT_MENU_START_ITEM, actionMenuTitle, createContextMenuItem, ensureContextMenu, ensureContextMenuChain, findContextMenuTab };

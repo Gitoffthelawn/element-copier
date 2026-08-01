@@ -45,7 +45,6 @@ Pour les développeurs et les testeurs : URL, code HTML, tag#id.class, sélecteu
 - Conserver le dernier contenu copié pour tous les formats activés
 - Copier le contenu dans le presse-papiers ou le télécharger sous forme de fichier
 - Utiliser une action par défaut configurable pour accélérer les copies répétées
-- Raccourcis clavier
 - Thèmes clair et sombre
 - Paramètres flexibles
 - Interface disponible en anglais, français, allemand, espagnol, russe, arabe et chinois simplifié
@@ -71,7 +70,6 @@ Pour les développeurs et les testeurs : URL, code HTML, tag#id.class, sélecteu
 ### Notes sur le produit
 
 - La mise en forme du texte enrichi vise un meilleur résultat qu'un simple copier-coller
-- Les raccourcis clavier et une action par défaut réduisent le nombre d'étapes pour les copies répétées
 - Les formats destinés aux développeurs fournissent des données d'inspection courantes sans ouvrir les DevTools
 - Le traitement Markdown préserve autant que possible la mise en page, les liens et les images du contenu, y compris les images SVG converties
 
@@ -79,7 +77,7 @@ Pour les développeurs et les testeurs : URL, code HTML, tag#id.class, sélecteu
 
 - Aucune collecte de données
 - Aucun suivi
-- Aucune requête réseau
+- Aucune transmission de données
 - Le contenu des pages est traité localement dans le navigateur
 
 ## LIMITATIONS

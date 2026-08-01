@@ -45,7 +45,6 @@ Für Entwickler und Tester: URLs, HTML-Code, tag#id.class, CSS-Selektoren, JS-Pf
 - Zuletzt kopierte Inhalte für alle aktivierten Formate speichern
 - Inhalte in die Zwischenablage kopieren oder als Datei herunterladen
 - Konfigurierbare Standardaktion für schnelleres wiederholtes Kopieren
-- Tastaturkürzel
 - Helles und dunkles Design
 - Flexible Einstellungen
 - Oberfläche verfügbar auf Englisch, Französisch, Deutsch, Spanisch, Russisch, Arabisch und vereinfachtem Chinesisch
@@ -71,7 +70,6 @@ Für Entwickler und Tester: URLs, HTML-Code, tag#id.class, CSS-Selektoren, JS-Pf
 ### Produkthinweise
 
 - Die Rich-Text-Formatierung liefert bessere Ergebnisse als einfaches Kopieren und Einfügen
-- Tastaturkürzel und eine Standardaktion reduzieren die Anzahl der Schritte bei wiederholtem Kopieren
 - Entwicklerformate stellen häufig benötigte Prüfdaten ohne DevTools bereit
 - Die Markdown-Verarbeitung bewahrt nach Möglichkeit Layout, Links und Inhaltsbilder, einschließlich konvertierter SVG-Bilder
 
@@ -79,7 +77,7 @@ Für Entwickler und Tester: URLs, HTML-Code, tag#id.class, CSS-Selektoren, JS-Pf
 
 - Keine Datenerfassung
 - Kein Tracking
-- Keine Netzwerkanfragen
+- Keine Datenübertragung
 - Seiteninhalte werden lokal im Browser verarbeitet
 
 ## EINSCHRÄNKUNGEN
