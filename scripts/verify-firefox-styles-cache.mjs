@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
-const stylesSource = readFileSync(
-  new URL("../extension/app/copy/styles.js", import.meta.url),
+const stylesContextSource = readFileSync(
+  new URL("../extension/app/copy/styles-context.js", import.meta.url),
   "utf8"
 );
 const cacheSource = readFileSync(
@@ -10,17 +10,17 @@ const cacheSource = readFileSync(
   "utf8"
 );
 assert.doesNotMatch(
-  stylesSource,
+  stylesContextSource,
   /for\s*\(\s*const\s+\w+\s+of\s+adoptedSheets\s*\)/,
   "styles.js must not for...of adoptedStyleSheets (Firefox bug 1770592)"
 );
 assert.match(
-  stylesSource,
+  stylesContextSource,
   /for\s*\(\s*let\s+i\s*=\s*0;\s*i\s*<\s*adoptedSheets\.length/,
   "styles.js must iterate adoptedStyleSheets by index"
 );
 assert.match(
-  stylesSource,
+  stylesContextSource,
   /1770592/,
   "styles.js should document the Firefox bug id"
 );
