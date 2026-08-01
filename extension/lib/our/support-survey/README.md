@@ -1,5 +1,5 @@
 # Support survey
 
-Общая логика постоянного счётчика целевых действий, порога показа, отложения и ограничения частоты показа.
+`logic.js` contains the extension's action counter, display threshold, deferral, and display-frequency rules.
 
-Модуль копируется в расширения как `extension/lib/our/support-survey/logic.js`. Локальная интеграция выполняется через обёртки расширений.
+Browser and UI integration is implemented in `extension/app/support-survey/`.

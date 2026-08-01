@@ -1,6 +1,6 @@
 "use strict";
 
-// Copied into extensions from lib/our/support-survey/ without local changes.
+// Support-survey state transitions; browser integration lives in extension/app.
 (function () {
   function toCount(value, fallback) {
     return typeof value === "number" && Number.isFinite(value) && value >= 0

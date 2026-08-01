@@ -40,7 +40,7 @@ Regular SemVer logic.
 - Hardened clipboard HTML parsing and info-window content insertion against unsafe `innerHTML`
 
 ### 1.1.10
-- Unified Lucide UI icons via shared vendor copies (`lib/vendor/icons`)
+- Unified Lucide UI icons in the extension-local vendor modules (`extension/lib/vendor/icons`)
 
 ### 1.1.9
 - Welcome pin hint is positioned from the viewport edge (no fixed inset)
