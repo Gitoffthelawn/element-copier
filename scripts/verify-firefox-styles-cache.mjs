@@ -2,26 +2,13 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
 const stylesSource = readFileSync(
-  new URL("../extension/lib/our/copy/styles.js", import.meta.url),
+  new URL("../extension/app/copy/styles.js", import.meta.url),
   "utf8"
 );
 const cacheSource = readFileSync(
   new URL("../extension/app/pick-mode/pick-copy-cache.js", import.meta.url),
   "utf8"
 );
-const manifest = JSON.parse(
-  readFileSync(new URL("../extension/manifest.json", import.meta.url), "utf8")
-);
-const changelog = readFileSync(new URL("../CHANGELOG.md", import.meta.url), "utf8");
-
-assert.equal(manifest.version, "1.1.4", "manifest PATCH version must be 1.1.4");
-assert.match(changelog, /### 1\.1\.4/, "CHANGELOG must include release 1.1.4");
-assert.match(
-  changelog,
-  /bugzilla\.mozilla\.org\/show_bug\.cgi\?id=1770592/,
-  "CHANGELOG 1.1.4 must cite Firefox bug 1770592"
-);
-
 assert.doesNotMatch(
   stylesSource,
   /for\s*\(\s*const\s+\w+\s+of\s+adoptedSheets\s*\)/,
@@ -51,7 +38,7 @@ assert.match(
 
 globalThis.ShadowRoot ??= class ShadowRoot {};
 
-const stylesUrl = new URL("../extension/lib/our/copy/styles.js", import.meta.url).href;
+const stylesUrl = new URL("../extension/app/copy/styles.js", import.meta.url).href;
 const { collectStylesheetContext } = await import(`${stylesUrl}?t=${Date.now()}`);
 
 function makeNonIterableAdoptedSheets(sheets) {

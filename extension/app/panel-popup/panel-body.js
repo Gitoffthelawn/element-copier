@@ -5,7 +5,7 @@ import { copyPickedFormatFromPanel } from "./copy-picked-format.js";
 import { createClipboardDefaultFormatSelect, createComputeFormatsSection, createCopiedOtherOptionsRow, createDarkThemeToggleRow, createDeveloperToolsToggleRow, createFrameLabelStyleSelect, createInlineImagesSelect, syncCopiedPanelFormatSelection } from "../formats/format-ui.js";
 import { createLanguageSelectorRow } from "./language-selector.js";
 import { defaultEnabledFormats, getDefaultAction, getEnabledFormats, isActiveDefaultAction } from "../settings/format-settings.js";
-import { ext } from "../../lib/our/api.js";
+import { ext } from "../api.js";
 import { getLastCopiedFormat, getLastCopiedPanelAction, getLastDownloadedFormat, markCopiedPanelShowStatus, resolveCopiedPanelSelection, setLastCopiedFormat, setLastDownloadedFormat, shouldShowCopiedPanelStatus } from "../settings/copied-session.js";
 import { getLocale } from "../storage.js";
 import { hasPickCopyCacheInStorage, readPickCopyCacheFromStorage, resolvePickCopyCacheStorageKey } from "../pick-mode/pick-copy-cache-storage.js";

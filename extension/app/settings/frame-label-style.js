@@ -1,5 +1,5 @@
 import { FRAME_LABEL_STYLE_KEY } from "../messages.js";
-import { ext } from "../../lib/our/api.js";
+import { ext } from "../api.js";
 
 var DEFAULT_FRAME_LABEL_STYLE = "click-to-copy";
 

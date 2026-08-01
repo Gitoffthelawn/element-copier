@@ -1,4 +1,4 @@
-import { DEFAULT_IMAGE_ALT, sanitizeMarkdownAltText } from "../../../vendor/turndown/sanitize-alt.js";
+import { DEFAULT_IMAGE_ALT, sanitizeMarkdownAltText } from "../../../vendor/turndown.js";
 import { resolveMaterializedImageSrc } from "./image-src.js";
 
 function keepInlineSrc(src, shouldMaterializeInlineSrc) {

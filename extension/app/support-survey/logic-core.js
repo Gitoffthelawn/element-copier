@@ -1,14 +1,10 @@
-"use strict";
-
-// Support-survey state transitions; browser integration lives in extension/app.
-(function () {
-  function toCount(value, fallback) {
+function toCount(value, fallback) {
     return typeof value === "number" && Number.isFinite(value) && value >= 0
       ? Math.floor(value)
       : fallback;
   }
 
-  function createSupportSurveyLogic(options) {
+function createSupportSurveyLogic(options) {
     const threshold = toCount(options?.threshold, 0);
     const cooldownMs = toCount(options?.cooldownMs, 0);
 
@@ -98,5 +94,4 @@
     };
   }
 
-  globalThis.createSupportSurveyLogic = createSupportSurveyLogic;
-})();
+export { createSupportSurveyLogic, toCount };

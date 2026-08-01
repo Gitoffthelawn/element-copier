@@ -2,8 +2,8 @@ import { PANEL_BODY_CENTERED_CLASS, buildAboutPanelBody, buildCopiedPanelBody, b
 import { PANEL_MENU_TABS } from "./constants.js";
 import { createPanelSurface } from "./build-panel-surface.js";
 import { hasPickCopyCacheInStorage } from "../pick-mode/pick-copy-cache-storage.js";
-import { isRtlLocale } from "../../lib/our/i18n/rtl.js";
-import { localeToHtmlLang } from "../../lib/our/i18n/locale-code.js";
+import { isRtlLocale } from "../i18n/rtl.js";
+import { localeToHtmlLang } from "../i18n/locale-code.js";
 import { notifyCopyPage, notifyPanelClosed, notifyPanelTabChanged, notifyStartPickMode } from "./lifecycle.js";
 import { setLocale } from "../storage.js";
 import { syncPanelThemeFromStorage } from "./panel-theme.js";

@@ -1,20 +1,20 @@
 import { PANEL_POPUP_PAGE, PANEL_SESSION_PORT_NAME } from "../panel-popup/constants.js";
 import { PICK_COPY_CACHE_INDEX_KEY, PICK_COPY_CACHE_STORAGE_KEY, getPickCopyTextFromStorage, refreshPickCopyCachePresenceSync } from "../pick-mode/pick-copy-cache-storage.js";
 import { bootstrapToolbarIcons, onContentActiveChanged2, registerExtensionIconStateListeners2, syncIconForTab } from "../extension-icon-state/index.js";
-import { canOperateOnTab } from "../../lib/our/page-operability/can-operate.js";
+import { canOperateOnTab } from "../page-operability/can-operate.js";
 import { clearBlockedBadgeState, clearTabBadgeState, onBlockedNoticeDismissed, registerToolbarPrefixBadgeListeners, setCopiedBadge, showBlockedPageFeedback, syncToolbarBadge } from "../background-badge.js";
 import { clearCopiedPanelShowStatus, markCopiedPanelShowStatus, setLastCopiedFormat, setLastDownloadedFormat } from "../settings/copied-session.js";
 import { consumePanelSessionClose } from "../panel-popup/panel-session.js";
 import { ensureContextMenu, findContextMenuTab } from "../background-context-menu.js";
 import { ensureLocaleInStorage } from "../storage.js";
-import { ext } from "../../lib/our/api.js";
-import { getTabActiveState, setTabActiveState } from "../../lib/our/extension-icon-state/tab-active-state.js";
-import { isBlockedNoticeDismissedMessage } from "../../lib/our/page-operability/messages.js";
+import { ext } from "../api.js";
+import { getTabActiveState, setTabActiveState } from "../extension-icon-state/tab-active-state.js";
+import { isBlockedNoticeDismissedMessage } from "../page-operability/messages.js";
 import { openCopiedPanelFromCopy, openPanelFromSender, openStartPanelFromToolbar } from "../panel-popup/open.js";
 import { readPanelTargetTabId, rememberPanelTargetTab } from "../panel-popup/panel-target-tab.js";
 import { refreshRestrictedNoticeCache } from "../page-operability/notice.js";
 import { registerBackgroundHotkeys, shouldSuppressToolbarClickAfterHotkeyCommand } from "../hotkeys/background.js";
-import { registerPrefixHintOperabilityListeners } from "../../lib/our/hotkeys/prefix-operability.js";
+import { registerPrefixHintOperabilityListeners } from "../hotkeys/prefix-operability.js";
 import { showWelcome, stopWelcomePinWatcher2, watchWelcomePinStatus2 } from "../welcome/background.js";
 
 var TOGGLE_DEBOUNCE_MS = 80;

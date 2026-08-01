@@ -1,5 +1,5 @@
 import { isPanelPopupPage, resolvePanelPageInitialTab2 } from "../panel-popup/page.js";
-import { isPanelTabMode } from "../../lib/our/panel-tab/index.js";
+import { isPanelTabMode } from "../panel-tab/index.js";
 import { mountPanelTab } from "./mount.js";
 
 async function bootstrapPanelTabPageIfNeeded() {

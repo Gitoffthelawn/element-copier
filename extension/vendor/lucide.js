@@ -1,4 +1,5 @@
 import { arrow_up_default } from "./lucide/arrow-up.js";
+import { chart_column_increasing_default } from "./lucide/chart-column-increasing.js";
 import { circle_power_default } from "./lucide/circle-power.js";
 import { cog_default } from "./lucide/cog.js";
 import { copy_default } from "./lucide/copy.js";
@@ -18,6 +19,8 @@ import { puzzle_default } from "./lucide/puzzle.js";
 import { rotate_cw_default } from "./lucide/rotate-cw.js";
 import { settings_default } from "./lucide/settings.js";
 import { shield_check_default } from "./lucide/shield-check.js";
+import { square_check_default } from "./lucide/square-check.js";
+import { terminal_default } from "./lucide/terminal.js";
 
 function stripComment(svg) {
   return svg.replace(/<!--[\s\S]*?-->\s*/g, "").trim();
@@ -28,6 +31,7 @@ function lucideUiIcon(raw) {
 }
 
 var ARROW_UP = lucideUiIcon(arrow_up_default);
+var CHART_COLUMN_INCREASING = lucideUiIcon(chart_column_increasing_default);
 var CIRCLE_POWER = lucideUiIcon(circle_power_default);
 var COG = lucideUiIcon(cog_default);
 var COPY = lucideUiIcon(copy_default);
@@ -47,5 +51,7 @@ var PUZZLE = lucideUiIcon(puzzle_default);
 var ROTATE_CW = lucideUiIcon(rotate_cw_default);
 var SETTINGS = lucideUiIcon(settings_default);
 var SHIELD_CHECK = lucideUiIcon(shield_check_default);
+var SQUARE_CHECK = lucideUiIcon(square_check_default);
+var TERMINAL = lucideUiIcon(terminal_default);
 
-export { stripComment, lucideUiIcon, ARROW_UP, CIRCLE_POWER, COG, COPY, EXTERNAL_LINK, FILE_DOWN, FILES, GIT_FORK, HEART, HISTORY, IMAGE_DOWN, IMAGES, INFO, KEYBOARD, PIN, PLAY, PUZZLE, ROTATE_CW, SETTINGS, SHIELD_CHECK };
+export { stripComment, lucideUiIcon, ARROW_UP, CHART_COLUMN_INCREASING, CIRCLE_POWER, COG, COPY, EXTERNAL_LINK, FILE_DOWN, FILES, GIT_FORK, HEART, HISTORY, IMAGE_DOWN, IMAGES, INFO, KEYBOARD, PIN, PLAY, PUZZLE, ROTATE_CW, SETTINGS, SHIELD_CHECK, SQUARE_CHECK, TERMINAL };

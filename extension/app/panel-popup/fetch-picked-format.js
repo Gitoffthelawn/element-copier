@@ -1,4 +1,4 @@
-import { ext } from "../../lib/our/api.js";
+import { ext } from "../api.js";
 
 async function fetchPickedFormatText(formatId) {
   try {

@@ -1,5 +1,5 @@
-import { ext } from "../../lib/our/api.js";
-import { isFormattedTextCacheStorable } from "../../lib/our/copy/formatted-text/cache.js";
+import { ext } from "../api.js";
+import { isFormattedTextCacheStorable } from "../copy/formatted-text/cache.js";
 
 var PICK_COPY_CACHE_STORAGE_KEY = "pickCopyCache";
 

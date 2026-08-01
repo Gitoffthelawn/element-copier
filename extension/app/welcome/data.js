@@ -1,11 +1,11 @@
-import { ARROW_UP, HEART, PIN, PUZZLE } from "../../lib/vendor/icons/index.js";
+import { ARROW_UP, HEART, PIN, PUZZLE } from "../../vendor/lucide.js";
 import { LOCALES, LOCALE_BUTTON_LABELS } from "../i18n/types.js";
 import { PANEL_TITLE } from "../brand.js";
 import { buildAboutListItems } from "../about.js";
-import { isRtlLocale } from "../../lib/our/i18n/rtl.js";
+import { isRtlLocale } from "../i18n/rtl.js";
 import { t } from "../i18n/strings.js";
 import { ABOUT_SECTION_ICONS, toolbarWelcomeIconSvg } from "../icons.js";
-import { welcomeStepIcon } from "../../lib/our/welcome/step-icon.js";
+import { welcomeStepIcon } from "../welcome/step-icon.js";
 
 function buildWelcomeLocalePayload(locale) {
   const strings = t(locale);

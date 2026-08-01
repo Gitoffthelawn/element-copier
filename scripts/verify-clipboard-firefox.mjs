@@ -40,7 +40,7 @@ assert.match(
 );
 
 const formattedSource = readFileSync(
-  new URL("../extension/lib/our/copy/formatted-text/clipboard.js", import.meta.url),
+  new URL("../extension/app/copy/formatted-text/clipboard.js", import.meta.url),
   "utf8"
 );
 assert.match(

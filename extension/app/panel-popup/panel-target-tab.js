@@ -1,4 +1,4 @@
-import { ext } from "../../lib/our/api.js";
+import { ext } from "../api.js";
 
 var PANEL_TARGET_TAB_SESSION_KEY = "panelTargetTabId";
 

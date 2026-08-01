@@ -1,5 +1,5 @@
 import { COMPUTE_IMAGES_ENABLED_KEY } from "../messages.js";
-import { ext } from "../../lib/our/api.js";
+import { ext } from "../api.js";
 
 var COMPUTE_IMAGES_FORMAT_IDS = ["png", "jpeg"];
 

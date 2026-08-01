@@ -1,5 +1,5 @@
 import { ElementHighlightVisual } from "./visual.js";
-import { pickElementUnderCursor } from "../element-under-cursor.js";
+import { pickElementUnderCursor } from "../pick-mode/element-under-cursor.js";
 import { removePageHighlightStyles } from "./page-styles.js";
 
 var HighlightSystem = class {

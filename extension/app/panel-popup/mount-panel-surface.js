@@ -4,7 +4,7 @@ import { PANEL_POPUP_HOST_ATTR, PANEL_POPUP_ROOT_ID } from "./constants.js";
 import { bindPanelSessionPort, notifyPanelClosed } from "./lifecycle.js";
 import { bindPanelThemeSync } from "./panel-theme.js";
 import { getLocale } from "../storage.js";
-import { mountPanelShadowHost } from "../../lib/our/panel-shell/shadow-host.js";
+import { mountPanelShadowHost } from "../panel-shell/shadow-host.js";
 
 var activePopupWindow = null;
 

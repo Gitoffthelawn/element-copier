@@ -1,4 +1,4 @@
-import { ext } from "../lib/our/api.js";
+import { ext } from "./api.js";
 
 function sendToBackground(msg) {
   void ext.runtime.sendMessage(msg).catch(() => {

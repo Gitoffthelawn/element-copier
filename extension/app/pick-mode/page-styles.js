@@ -1,5 +1,5 @@
-import { buildGenericHighlightPageCss } from "../../lib/our/highlight/page-styles.js";
-import { createHighlightUiClasses } from "../../lib/our/highlight/classes.js";
+import { buildGenericHighlightPageCss } from "../highlight/page-styles.js";
+import { createHighlightUiClasses } from "../highlight/classes.js";
 
 var HIGHLIGHT_STYLE_ID = "element-copier-highlight-style";
 

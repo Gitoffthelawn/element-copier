@@ -1,4 +1,4 @@
-import { SAFE_EXTENSION_API_IGNORED_ERRORS } from "../../app/safe-extension-api-rules.js";
+import { SAFE_EXTENSION_API_IGNORED_ERRORS } from "./safe-extension-api-rules.js";
 import { createSafeExtensionApi } from "./safe-extension-api.js";
 
 var ext = createSafeExtensionApi(

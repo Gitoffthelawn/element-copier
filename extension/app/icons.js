@@ -1,8 +1,4 @@
-import { INFO, SHIELD_CHECK } from "../lib/vendor/icons/index.js";
-import { chart_column_increasing_default } from "../lib/vendor/icons/lucide/chart-column-increasing.js";
-import { files_default } from "../lib/vendor/icons/lucide/files.js";
-import { square_check_default } from "../lib/vendor/icons/lucide/square-check.js";
-import { terminal_default } from "../lib/vendor/icons/lucide/terminal.js";
+import { CHART_COLUMN_INCREASING, FILES, INFO, SHIELD_CHECK, SQUARE_CHECK, TERMINAL } from "../vendor/lucide.js";
 
 var INACTIVE_BG = "#012292";
 
@@ -16,23 +12,19 @@ function stripComment3(svg) {
   return svg.replace(/<!--[\s\S]*?-->\s*/g, "").trim();
 }
 
-function lucideUiIcon(raw) {
-  return stripComment3(raw);
-}
-
 function innerSvgMarkup(svg) {
   const match = svg.match(/<svg[\s\S]*?>([\s\S]*)<\/svg>/i);
   return match ? match[1].trim() : svg;
 }
 
-var filesInner = innerSvgMarkup(stripComment3(files_default));
+var filesInner = innerSvgMarkup(FILES);
 
 var ABOUT_SECTION_ICONS = {
   overview: INFO,
-  capabilities: lucideUiIcon(square_check_default),
+  capabilities: SQUARE_CHECK,
   privacy: SHIELD_CHECK,
-  code: lucideUiIcon(terminal_default),
-  statistics: lucideUiIcon(chart_column_increasing_default),
+  code: TERMINAL,
+  statistics: CHART_COLUMN_INCREASING,
 };
 
 function toolbarWelcomeIconSvg(bg = INACTIVE_BG, size = 16) {

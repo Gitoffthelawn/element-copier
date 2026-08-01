@@ -1,4 +1,4 @@
-import { ext } from "../../lib/our/api.js";
+import { ext } from "../api.js";
 import { SUPPORT_SURVEY_STORAGE_KEY } from "./constants.js";
 import {
   addSuccessfulActions,

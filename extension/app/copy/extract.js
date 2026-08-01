@@ -1,14 +1,14 @@
-import { cloneElementForClipboard } from "../../lib/our/copy/cleanup/clone.js";
-import { elementToMarkdown } from "../../lib/vendor/turndown/turndown.js";
-import { extractHtmlFromPreparedContainer, finalizeFormattedHtml } from "../../lib/our/copy/formatted-text/extract.js";
-import { getCssSelector } from "../../lib/our/copy/selector.js";
-import { getElementComputedStyles } from "../../lib/our/copy/styles-computed.js";
-import { getElementStyles } from "../../lib/our/copy/styles.js";
-import { getFullXPath, getXPath } from "../../lib/our/copy/xpath.js";
-import { getJsPath } from "../../lib/our/copy/js-path.js";
+import { cloneElementForClipboard } from "../copy/cleanup/clone.js";
+import { elementToMarkdown } from "../../vendor/turndown.js";
+import { extractHtmlFromPreparedContainer, finalizeFormattedHtml } from "../copy/formatted-text/extract.js";
+import { getCssSelector } from "../copy/selector.js";
+import { getElementComputedStyles } from "../copy/styles-computed.js";
+import { getElementStyles } from "../copy/styles.js";
+import { getFullXPath, getXPath } from "../copy/xpath.js";
+import { getJsPath } from "../copy/js-path.js";
 import { formatTagIdClassLabel } from "../pick-mode/element-label.js";
-import { prepareElementForCopy } from "../../lib/our/copy/cleanup/index.js";
-import { serializeFormattedTextCache } from "../../lib/our/copy/formatted-text/cache.js";
+import { prepareElementForCopy } from "../copy/cleanup/index.js";
+import { serializeFormattedTextCache } from "../copy/formatted-text/cache.js";
 
 function getDocumentBaseHref(element) {
   return element.ownerDocument.baseURI || element.ownerDocument.location?.href || "";

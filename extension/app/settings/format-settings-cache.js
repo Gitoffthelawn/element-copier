@@ -2,7 +2,7 @@ import { CLIPBOARD_DEFAULT_FORMAT_KEY, COMPUTE_IMAGES_ENABLED_KEY, DEVELOPER_TOO
 import { DEFAULT_FRAME_LABEL_STYLE, getFrameLabelStyle } from "./frame-label-style.js";
 import { DEFAULT_INLINE_IMAGES_MODE, getInlineImagesMode } from "./inline-images.js";
 import { defaultEnabledFormats, ensureDefaultActionAllowsComputeImages, getEnabledFormats, isActiveDefaultAction } from "./format-settings.js";
-import { ext } from "../../lib/our/api.js";
+import { ext } from "../api.js";
 import { getLocale } from "../storage.js";
 import { t } from "../i18n/strings.js";
 
