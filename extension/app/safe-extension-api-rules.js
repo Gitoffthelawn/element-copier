@@ -32,6 +32,10 @@ const SAFE_EXTENSION_API_IGNORED_ERRORS = {
     messages: ["No tab with id", "Invalid tab ID"],
     fallback: void 0,
   },
+  "action.setIcon": {
+    messages: ["No tab with id", "Invalid tab ID"],
+    fallback: void 0,
+  },
 };
 
 export { SAFE_EXTENSION_API_IGNORED_ERRORS };

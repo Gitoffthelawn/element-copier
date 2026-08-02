@@ -283,19 +283,12 @@ async function toggleTab(tabId, windowId, tabUrl, source = "toolbar") {
   await deactivateTab(tabId, windowId);
 }
 
-function getActiveCommandTab() {
-  return new Promise((resolve) => {
-    ext.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
-      const tab = tabs[0];
-      if (tab?.id !== void 0) {
-        resolve(tab);
-        return;
-      }
-      ext.tabs.query({ active: true, currentWindow: true }, (fallback) => {
-        resolve(fallback[0]);
-      });
-    });
-  });
+async function getActiveCommandTab() {
+  const tabs = await ext.tabs.query({ active: true, lastFocusedWindow: true });
+  const tab = tabs[0];
+  if (tab?.id !== void 0) return tab;
+  const fallback = await ext.tabs.query({ active: true, currentWindow: true });
+  return fallback[0];
 }
 
 ext.action.onClicked.addListener((tab) => {

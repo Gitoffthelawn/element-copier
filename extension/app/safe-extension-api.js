@@ -20,9 +20,41 @@ function shouldIgnoreExtensionApiError(ignoredErrors, method, err) {
   const message = String(err instanceof Error ? err.message : err?.message ?? err);
   return rule.messages.some((expected) => message.includes(expected));
 }
-function safeExtensionApiMethod(ignoredErrors, method, target, fn) {
+function chromeRuntimeLastErrorMessage() {
+  return globalThis.chrome?.runtime?.lastError?.message;
+}
+function resolveIgnoredOrThrow(ignoredErrors, method, rule, err, resolve, reject) {
+  if (shouldIgnoreExtensionApiError(ignoredErrors, method, err)) {
+    resolve(rule.fallback);
+    return;
+  }
+  reject(err instanceof Error ? err : new Error(String(err?.message ?? err)));
+}
+function safeExtensionApiMethod(
+  ignoredErrors,
+  method,
+  target,
+  fn,
+  useChromeLastErrorBridge = false,
+) {
   const rule = ignoredErrors[method];
   return function (...args) {
+    if (useChromeLastErrorBridge && typeof args[args.length - 1] !== "function") {
+      return new Promise((resolve, reject) => {
+        try {
+          fn.call(target, ...args, (value) => {
+            const message = chromeRuntimeLastErrorMessage();
+            if (message) {
+              resolveIgnoredOrThrow(ignoredErrors, method, rule, message, resolve, reject);
+              return;
+            }
+            resolve(value);
+          });
+        } catch (err) {
+          resolveIgnoredOrThrow(ignoredErrors, method, rule, err, resolve, reject);
+        }
+      });
+    }
     try {
       const result = fn.apply(target, args);
       if (!result?.then) return result;
@@ -42,6 +74,7 @@ function safeExtensionApiMethod(ignoredErrors, method, target, fn) {
 }
 function createSafeExtensionApi(base, ignoredErrors) {
   const normalizedIgnoredErrors = normalizeSafeExtensionApiIgnoredErrors(ignoredErrors);
+  const useChromeLastErrorBridge = base === globalThis.chrome;
   const namespaceCache = new Map();
   return new Proxy(base, {
     get(target, namespace, receiver) {
@@ -58,6 +91,7 @@ function createSafeExtensionApi(base, ignoredErrors) {
               methodKey,
               namespaceTarget,
               methodValue,
+              useChromeLastErrorBridge,
             );
           }
           return methodValue;
