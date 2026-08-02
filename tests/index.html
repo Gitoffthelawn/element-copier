@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Extension tests</title>
+    <title>tests element-copier</title>
     <style>
       :root {
         color-scheme: light dark;
@@ -47,10 +47,19 @@
     <script defer src="/__test-runner__/test-runner.js"></script>
     <script defer src="unit/test-runner.test.js"></script>
     <script defer src="integration/dom-events.test.js"></script>
+    <script type="module" src="unit/element-identifiers.test.js"></script>
+    <script type="module" src="unit/export-data.test.js"></script>
+    <script type="module" src="unit/support-survey.test.js"></script>
+    <script type="module" src="unit/firefox-styles-cache.test.js"></script>
+    <script type="module" src="unit/firefox-clipboard.test.js"></script>
+    <script type="module" src="unit/support-survey-browser.test.js"></script>
+    <script type="module" src="integration/copy-preparation.test.js"></script>
+    <script type="module" src="integration/hotkeys-dom.test.js"></script>
+    <script type="module" src="integration/highlight-pick.test.js"></script>
   </head>
   <body>
     <main>
-      <h1>Extension tests</h1>
+      <h1>tests element-copier</h1>
       <p id="summary" role="status" aria-live="polite">Waiting to run…</p>
       <ol id="results"></ol>
     </main>
