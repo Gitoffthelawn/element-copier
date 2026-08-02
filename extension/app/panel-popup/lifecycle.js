@@ -1,5 +1,5 @@
 import { PANEL_SESSION_PORT_NAME } from "./constants.js";
-import { ext } from "../../lib/our/api.js";
+import { ext } from "../api.js";
 import { sendToBackground } from "../messages.js";
 
 function notifyPanelTabChanged(tab) {

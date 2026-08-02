@@ -1,5 +1,5 @@
-import { domToCanvas } from "../../lib/vendor/modern-screenshot/index.js";
-import { isDerivativeFormatNoiseNode } from "../../lib/our/copy/cleanup/sanitize.js";
+import { domToCanvas } from "../../vendor/modern-screenshot.js";
+import { isDerivativeFormatNoiseNode } from "../copy/cleanup/sanitize.js";
 
 var IMAGE_FORMATS = /* @__PURE__ */ new Set(["png", "jpeg"]);
 

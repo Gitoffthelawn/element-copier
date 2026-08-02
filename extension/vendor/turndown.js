@@ -1,6 +1,32 @@
-import { TurndownService } from "./turndown.browser.es.js";
-import { relaxTurndownBracketEscapes, repairLinkedImageBreaks } from "./postprocess.js";
-import { sanitizeMarkdownAltText } from "./sanitize-alt.js";
+import { TurndownService } from "./turndown/turndown.browser.es.js";
+
+var DEFAULT_IMAGE_ALT = "image";
+
+function sanitizeMarkdownAltText(alt) {
+  const cleaned = alt.replace(/[[\]]/g, "").replace(/\s+/g, " ").trim();
+  return cleaned || DEFAULT_IMAGE_ALT;
+}
+
+function unescapeBracketEscapesInLabel(label) {
+  return label.replace(/\\\[/g, "[").replace(/\\\]/g, "]");
+}
+
+function repairLinkedImageBreaks(markdown) {
+  return markdown.replace(
+    /\[(\s*!\[(?:\\.|[^\]])*?\]\((?:\\.|[^)])*?\))\s*\]\(/g,
+    (_match, inner) => `[${inner.trim()}](`
+  );
+}
+
+function relaxTurndownBracketEscapes(markdown) {
+  return markdown.replace(
+    /(!?)\[((?:\\.|[^\]])*?)\]\(/g,
+    (match, bang, label) => {
+      const plain = unescapeBracketEscapesInLabel(label);
+      return plain === label ? match : `${bang}[${plain}](`;
+    }
+  );
+}
 
 var TURNDOWN_OPTIONS = {
   headingStyle: "atx",
@@ -67,4 +93,4 @@ function elementToMarkdown(element) {
   return finalizeMarkdown(getTurndownService().turndown(element));
 }
 
-export { TURNDOWN_OPTIONS, cleanAttribute2, createTurndownService, elementToMarkdown, escapeImageAlt, escapeLinkDestination2, escapeLinkTitle2, finalizeMarkdown, getTurndownService, sharedService };
+export { DEFAULT_IMAGE_ALT, TURNDOWN_OPTIONS, cleanAttribute2, createTurndownService, elementToMarkdown, escapeImageAlt, escapeLinkDestination2, escapeLinkTitle2, finalizeMarkdown, getTurndownService, relaxTurndownBracketEscapes, repairLinkedImageBreaks, sanitizeMarkdownAltText, sharedService, unescapeBracketEscapesInLabel };

@@ -1,6 +1,6 @@
 import { ICON_STATE_LOG_LABEL, ICON_SYNCED_TAB_IDS_KEY } from "./constants.js";
 import { TOOLBAR_ICON_PATHS } from "../icon-paths.js";
-import { createExtensionIconState } from "../../lib/our/extension-icon-state/create.js";
+import { createExtensionIconState } from "../extension-icon-state/create.js";
 
 var iconState = createExtensionIconState({
   paths: TOOLBAR_ICON_PATHS,

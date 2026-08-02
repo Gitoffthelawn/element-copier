@@ -1,9 +1,9 @@
 import { COPIER_ACTIVE_COLOR } from "./brand.js";
-import { createBadgeTextColorAnimation } from "../lib/our/badge/text-color-animation.js";
-import { ext } from "../lib/our/api.js";
+import { createBadgeTextColorAnimation } from "./badge/text-color-animation.js";
+import { ext } from "./api.js";
 import { getRestrictedNoticeDismissMs, showRestrictedNotice } from "./page-operability/notice.js";
-import { getTabActiveState } from "../lib/our/extension-icon-state/tab-active-state.js";
-import { registerPrefixHintBadgeListeners } from "../lib/our/hotkeys/prefix-hint-badge.js";
+import { getTabActiveState } from "./extension-icon-state/tab-active-state.js";
+import { registerPrefixHintBadgeListeners } from "./hotkeys/prefix-hint-badge.js";
 
 var BADGE_TEXT_COLOR = "#ffffff";
 

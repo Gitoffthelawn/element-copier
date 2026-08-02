@@ -1,4 +1,4 @@
-import { FILES, INFO, PLAY, SETTINGS } from "../../lib/vendor/icons/index.js";
+import { FILES, INFO, PLAY, SETTINGS } from "../../vendor/lucide.js";
 
 var START_ITEM = {
   tab: "start",

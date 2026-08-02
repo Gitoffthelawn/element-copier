@@ -1,6 +1,6 @@
 "use strict";
 
-import { collectStylesheetContext } from "../../extension/lib/our/copy/styles.js";
+import { collectStylesheetContext } from "../../extension/app/copy/styles-context.js";
 
 const { assert, assertEqual, test } = TestHarness;
 
@@ -26,7 +26,7 @@ function makeNonIterableAdoptedSheets(sheets) {
 }
 
 test("styles.js iterates adoptedStyleSheets by index for Firefox bug 1770592", async () => {
-  const stylesSource = await readProjectFile("extension/lib/our/copy/styles.js");
+  const stylesSource = await readProjectFile("extension/app/copy/styles-context.js");
 
   assert(
     !/for\s*\(\s*const\s+\w+\s+of\s+adoptedSheets\s*\)/.test(stylesSource),

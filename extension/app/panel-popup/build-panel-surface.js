@@ -1,11 +1,11 @@
 import { PANEL_POPUP_HOST_ATTR } from "./constants.js";
 import { PANEL_TITLE } from "../brand.js";
-import { createPanelDivider, createPanelHeader } from "../../lib/our/panel-header/header.js";
+import { createPanelDivider, createPanelHeader } from "../panel-header/header.js";
 import { createPanelMenu } from "./panel-menu.js";
 import { getDarkThemeEnabled } from "../settings/theme-settings.js";
 import { hasPickCopyCacheInStorage } from "../pick-mode/pick-copy-cache-storage.js";
-import { isRtlLocale } from "../../lib/our/i18n/rtl.js";
-import { localeToHtmlLang } from "../../lib/our/i18n/locale-code.js";
+import { isRtlLocale } from "../i18n/rtl.js";
+import { localeToHtmlLang } from "../i18n/locale-code.js";
 import { t } from "../i18n/strings.js";
 import { toolbarWelcomeIconSvg } from "../icons.js";
 

@@ -1,5 +1,5 @@
 import { PANEL_TAB_PAGE_CLASS } from "./constants.js";
-import { applyPanelTabPageLayout } from "../../lib/our/panel-tab/index.js";
+import { applyPanelTabPageLayout } from "../panel-tab/index.js";
 
 function applyPanelTabPageLayout2() {
   applyPanelTabPageLayout(PANEL_TAB_PAGE_CLASS);

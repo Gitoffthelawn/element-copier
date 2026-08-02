@@ -1,9 +1,14 @@
 # THIRD-PARTY NOTICES
 
-### Lucide Icons
+## Lucide Icons
 
-- https://lucide.dev/license
-- https://github.com/lucide-icons/lucide/blob/main/LICENSE
+- Version: unversioned snapshot
+- Source: https://github.com/lucide-icons/lucide
+- License: ISC; selected icons derived from Feather are MIT
+- Bundled component: `extension/vendor/lucide/`
+- Integration entry point: `extension/vendor/lucide.js`
+- Status: project fork
+- Local changes: selected icon SVGs are packaged as JavaScript string modules; SVG elements are unchanged
 
 ISC License
 
@@ -51,11 +56,15 @@ SOFTWARE.
 
 ---
 
-### modern-screenshot
+## modern-screenshot
 
-- Version 4.7.0
-- https://www.npmjs.com/package/modern-screenshot
-- https://github.com/qq15725/modern-screenshot/blob/v4.7.0/LICENSE
+- Version: 4.7.0
+- Source: https://www.npmjs.com/package/modern-screenshot
+- License: MIT
+- Bundled component: `extension/vendor/modern-screenshot/`
+- Integration entry point: `extension/vendor/modern-screenshot.js`
+- Status: project fork
+- Local changes: de-bundled build containing only the subset used by the application
 
 The MIT License (MIT)
 
@@ -69,11 +78,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---
 
-### Turndown
+## Turndown
 
-- Version 7.2.4
-- https://www.npmjs.com/package/turndown
-- https://github.com/mixmark-io/turndown/blob/v7.2.4/LICENSE
+- Version: 7.2.4
+- Source: https://www.npmjs.com/package/turndown
+- License: MIT
+- Bundled component: `extension/vendor/turndown/`
+- Integration entry point: `extension/vendor/turndown.js`
+- Status: project fork
+- Local changes: de-bundled browser build containing only the subset used by the application
 
 MIT License
 

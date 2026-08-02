@@ -1,4 +1,4 @@
-import { ext } from "../../lib/our/api.js";
+import { ext } from "../api.js";
 import { normalizeCopyFormatId } from "../formats/definitions.js";
 
 var LAST_COPIED_FORMAT_KEY = "lastCopiedFormat";

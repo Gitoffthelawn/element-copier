@@ -1,7 +1,7 @@
 "use strict";
 
-import { createHighlightUiClasses } from "../../extension/lib/our/highlight/classes.js";
-import { pickElementUnderCursor } from "../../extension/lib/our/element-under-cursor.js";
+import { createHighlightUiClasses } from "../../extension/app/highlight/classes.js";
+import { pickElementUnderCursor } from "../../extension/app/pick-mode/element-under-cursor.js";
 
 const { assertEqual, test } = TestHarness;
 

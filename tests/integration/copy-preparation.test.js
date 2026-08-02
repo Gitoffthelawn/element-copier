@@ -1,6 +1,6 @@
 "use strict";
 
-import { prepareElementForCopy } from "../../extension/lib/our/copy/cleanup/index.js";
+import { prepareElementForCopy } from "../../extension/app/copy/cleanup/index.js";
 
 const { assert, assertEqual, test } = TestHarness;
 

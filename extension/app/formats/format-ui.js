@@ -1,12 +1,12 @@
 import { CLIPBOARD_DEFAULT_NOTHING, DEFAULT_ACTION_STORAGE_OPTIONS, encodeDefaultAction, ensureDefaultActionAllowsComputeImages, getDeveloperToolsEnabled, isDeveloperToolsGroup, isImageDefaultActionStorageValue, parseStoredDefaultAction, setDefaultAction, setDeveloperToolsEnabled } from "../settings/format-settings.js";
-import { COPY, EXTERNAL_LINK, INFO } from "../../lib/vendor/icons/index.js";
+import { COPY, EXTERNAL_LINK, INFO } from "../../vendor/lucide.js";
 import { COPY_FORMATS } from "./definitions.js";
 import { FRAME_LABEL_STYLES, getFrameLabelStyle, setFrameLabelStyle } from "../settings/frame-label-style.js";
 import { INLINE_IMAGES_MODES, getInlineImagesMode, setInlineImagesMode } from "../settings/inline-images.js";
 import { PANEL_POPUP_ROOT_ID } from "../panel-popup/constants.js";
 import { applyPanelTheme } from "../panel-popup/panel-theme.js";
 import { canCopyFormatToClipboard } from "../element-copy/clipboard.js";
-import { createInfoWindow, createInfoWindowClasses } from "../../lib/our/info-window/info-window.js";
+import { createInfoWindow, createInfoWindowClasses } from "../info-window/info-window.js";
 import { createToggleRow } from "../panel-popup/toggle-row.js";
 import { getComputeFormatsSettings, isComputeControlledFormat, setComputeImagesEnabled } from "../settings/compute-formats.js";
 import { getDarkThemeEnabled, setDarkThemeEnabled } from "../settings/theme-settings.js";

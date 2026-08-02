@@ -1,7 +1,7 @@
-import "../../lib/our/support-survey/logic.js";
 import { SUPPORT_SURVEY_COOLDOWN_MS, SUPPORT_SURVEY_THRESHOLD } from "./constants.js";
+import { createSupportSurveyLogic } from "./logic-core.js";
 
-const supportSurveyLogic = globalThis.createSupportSurveyLogic({
+const supportSurveyLogic = createSupportSurveyLogic({
   threshold: SUPPORT_SURVEY_THRESHOLD,
   cooldownMs: SUPPORT_SURVEY_COOLDOWN_MS,
 });

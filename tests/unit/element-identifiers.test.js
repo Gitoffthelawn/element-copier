@@ -1,8 +1,8 @@
 "use strict";
 
-import { getJsPath } from "../../extension/lib/our/copy/js-path.js";
-import { getCssSelector } from "../../extension/lib/our/copy/selector.js";
-import { evaluateXPath, getFullXPath, getXPath } from "../../extension/lib/our/copy/xpath.js";
+import { getJsPath } from "../../extension/app/copy/js-path.js";
+import { getCssSelector } from "../../extension/app/copy/selector.js";
+import { evaluateXPath, getFullXPath, getXPath } from "../../extension/app/copy/xpath.js";
 
 const { assert, assertEqual, test } = TestHarness;
 

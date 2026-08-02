@@ -1,6 +1,6 @@
 "use strict";
 
-import { createPrefixModeController } from "../../extension/lib/our/hotkeys/prefix-mode.js";
+import { createPrefixModeController } from "../../extension/app/hotkeys/prefix-mode.js";
 
 const { assertEqual, test } = TestHarness;
 

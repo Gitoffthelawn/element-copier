@@ -1,6 +1,6 @@
 import { CLIPBOARD_DEFAULT_FORMAT_KEY, DEVELOPER_TOOLS_ENABLED_KEY, ENABLED_FORMATS_KEY } from "../messages.js";
 import { COPY_FORMATS, DEFAULT_CLIPBOARD_FORMAT_ID, normalizeCopyFormatId } from "../formats/definitions.js";
-import { ext } from "../../lib/our/api.js";
+import { ext } from "../api.js";
 import { getComputeFormatsSettings, isFormatEnabledByComputeSettings } from "./compute-formats.js";
 
 var DEVTOOLS_FORMAT_IDS = COPY_FORMATS.filter(

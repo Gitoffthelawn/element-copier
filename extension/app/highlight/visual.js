@@ -1,5 +1,5 @@
 import { ensurePageHighlightStyles, removePageHighlightStyles } from "./page-styles.js";
-import { isIframeHitTestable, isSignificantIframe, listIframesWithin } from "../element-under-cursor.js";
+import { isIframeHitTestable, isSignificantIframe, listIframesWithin } from "../pick-mode/element-under-cursor.js";
 
 var HIGHLIGHT_FRAME_INSET = 2;
 

@@ -1,6 +1,6 @@
 import { WELCOME_SESSION_DATA_KEY } from "./constants.js";
-import { bootstrapWelcomePage } from "../../lib/our/welcome/page.js";
-import { isRtlLocale } from "../../lib/our/i18n/rtl.js";
+import { bootstrapWelcomePage } from "./page-ui.js";
+import { isRtlLocale } from "../i18n/rtl.js";
 
 void bootstrapWelcomePage({
   sessionDataKey: WELCOME_SESSION_DATA_KEY,

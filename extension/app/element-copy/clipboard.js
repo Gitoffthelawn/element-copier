@@ -1,8 +1,8 @@
-import { copyFormattedTextToClipboard } from "../../lib/our/copy/formatted-text/clipboard.js";
+import { copyFormattedTextToClipboard } from "../copy/formatted-text/clipboard.js";
 import { dataUrlToBlob } from "./download.js";
 import { isImageCopyFormat } from "../copy/screenshot.js";
-import { parseFormattedTextCache } from "../../lib/our/copy/formatted-text/cache.js";
-import { ext } from "../../lib/our/api.js";
+import { parseFormattedTextCache } from "../copy/formatted-text/cache.js";
+import { ext } from "../api.js";
 
 function isFirefoxExtensionRuntime() {
   try {

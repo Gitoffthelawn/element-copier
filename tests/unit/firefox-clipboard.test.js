@@ -43,7 +43,7 @@ test("background service worker handles Firefox image clipboard writes", async (
 });
 
 test("formatted clipboard copy keeps Firefox and insecure-page fallbacks", async () => {
-  const formattedSource = await readProjectFile("extension/lib/our/copy/formatted-text/clipboard.js");
+  const formattedSource = await readProjectFile("extension/app/copy/formatted-text/clipboard.js");
   assert(
     /isFirefox\(\) \|\| globalThis\.isSecureContext === false/.test(formattedSource),
     "formatted copy must prefer legacy execCommand in Firefox and on insecure pages."

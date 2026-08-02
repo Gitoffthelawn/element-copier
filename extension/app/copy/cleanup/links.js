@@ -1,5 +1,5 @@
 import { absolutizeElementUrls } from "../urls.js";
-import { sanitizeMarkdownAltText } from "../../../vendor/turndown/sanitize-alt.js";
+import { sanitizeMarkdownAltText } from "../../../vendor/turndown.js";
 
 function absolutizeClipboardLinks(root2, baseHref) {
   if (!baseHref) return;

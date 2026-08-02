@@ -1,8 +1,8 @@
 import { COPIER_ACTIVE_COLOR } from "../brand.js";
-import { createToggleCommandSuppressTracker } from "../../lib/our/hotkeys/suppress.js";
-import { ext } from "../../lib/our/api.js";
+import { createToggleCommandSuppressTracker } from "../hotkeys/suppress.js";
+import { ext } from "../api.js";
 import { getStartHotkeyEnabled } from "./settings.js";
-import { registerPrefixBackgroundHotkeys } from "../../lib/our/hotkeys/prefix-background.js";
+import { registerPrefixBackgroundHotkeys } from "../hotkeys/prefix-background.js";
 
 var TOGGLE_COMMAND = "activate-deactivate";
 

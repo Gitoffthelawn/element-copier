@@ -2,9 +2,9 @@
 
 import { getQaDetails } from "../../extension/app/copy/extract.js";
 import { normalizeCopyFormatId } from "../../extension/app/formats/definitions.js";
-import { parseFormattedTextCache, isFormattedTextCacheStorable } from "../../extension/lib/our/copy/formatted-text/cache.js";
-import { derivePlainFromClipboardHtml } from "../../extension/lib/our/copy/formatted-text/plain.js";
-import { applyInlineImagePolicy } from "../../extension/lib/our/copy/cleanup/inline-images.js";
+import { parseFormattedTextCache, isFormattedTextCacheStorable } from "../../extension/app/copy/formatted-text/cache.js";
+import { derivePlainFromClipboardHtml } from "../../extension/app/copy/formatted-text/plain.js";
+import { applyInlineImagePolicy } from "../../extension/app/copy/cleanup/inline-images.js";
 
 const { assert, assertEqual, test } = TestHarness;
 

@@ -1,6 +1,6 @@
 import { DARK_THEME_ENABLED_KEY } from "../messages.js";
 import { PANEL_POPUP_ROOT_ID } from "./constants.js";
-import { ext } from "../../lib/our/api.js";
+import { ext } from "../api.js";
 import { getDarkThemeEnabled } from "../settings/theme-settings.js";
 
 var HOST_DARK_CLASS = "ec-panel-popup--dark";

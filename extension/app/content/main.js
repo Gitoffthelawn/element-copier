@@ -5,12 +5,12 @@ import { bootstrapPanelPopupPageIfNeeded, isPanelPopupPage } from "../panel-popu
 import { bootstrapPanelTabPageIfNeeded } from "../panel-tab/bootstrap.js";
 import { copyToClipboardForFormat } from "../element-copy/clipboard.js";
 import { downloadTextAsFile } from "../element-copy/download.js";
-import { ext } from "../../lib/our/api.js";
+import { ext } from "../api.js";
 import { getCachedCopyText, snapshotPickCopyCache } from "../pick-mode/pick-copy-cache.js";
-import { isPanelTabMode } from "../../lib/our/panel-tab/index.js";
+import { isPanelTabMode } from "../panel-tab/index.js";
 import { mountCopierContentHotkeys, registerCopierStartHotkey, unmountCopierContentHotkeys } from "../hotkeys/copier-content.js";
 import { resolvePickCopyCacheStorageKey } from "../pick-mode/pick-copy-cache-storage.js";
-import { registerDocumentOperabilityProbeListener } from "../../lib/our/page-operability/content-probe.js";
+import { registerDocumentOperabilityProbeListener } from "../page-operability/content-probe.js";
 import { sendToBackground } from "../messages.js";
 import { showMountedPopupTab } from "../panel-popup/mount-panel-surface.js";
 import { incrementSupportSurveySuccessCount } from "../support-survey/state.js";

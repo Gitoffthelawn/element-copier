@@ -1,7 +1,7 @@
-import { ext } from "../lib/our/api.js";
+import { ext } from "./api.js";
 import { getLocale } from "./storage.js";
 import { hasPickCopyCacheInStorage } from "./pick-mode/pick-copy-cache-storage.js";
-import { isRtlLocale } from "../lib/our/i18n/rtl.js";
+import { isRtlLocale } from "./i18n/rtl.js";
 import { t } from "./i18n/strings.js";
 
 var CONTEXT_MENU_START = "element-copier-start";

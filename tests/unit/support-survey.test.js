@@ -1,11 +1,11 @@
 "use strict";
 
-import "../../extension/lib/our/support-survey/logic.js";
+import { createSupportSurveyLogic } from "../../extension/app/support-survey/logic-core.js";
 
 const { assert, assertEqual, test } = TestHarness;
 const threshold = 25;
 const cooldownMs = 60 * 24 * 60 * 60 * 1000;
-const survey = globalThis.createSupportSurveyLogic({ threshold, cooldownMs });
+const survey = createSupportSurveyLogic({ threshold, cooldownMs });
 
 test("support survey threshold defaults to 25 successful actions", () => {
   assertEqual(threshold, 25);

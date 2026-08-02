@@ -1,9 +1,9 @@
 import { PREFIX_ACTION_KEY } from "./commands.js";
 import { getEscHotkeyEnabled, getStartHotkeyEnabled } from "./settings.js";
 import { isEscHotkeyEvent } from "./keys.js";
-import { notifyPrefixHintBlockedOnBackground, queryPrefixHintCanShowFromBackground } from "../../lib/our/hotkeys/prefix-operability.js";
+import { notifyPrefixHintBlockedOnBackground, queryPrefixHintCanShowFromBackground } from "../hotkeys/prefix-operability.js";
 import { registerContentHotkey2, unregisterContentHotkey2 } from "./registry.js";
-import { registerPrefixStartHotkey } from "../../lib/our/hotkeys/prefix-content.js";
+import { registerPrefixStartHotkey } from "../hotkeys/prefix-content.js";
 
 var HOTKEY_NAMESPACE2 = "elementCopier";
 

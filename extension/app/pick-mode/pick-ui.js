@@ -1,7 +1,7 @@
 import { COPIER_HIGHLIGHT_PAGE_STYLE, HIGHLIGHT_UI } from "./page-styles.js";
-import { HighlightSystem } from "../../lib/our/highlight/selector.js";
+import { HighlightSystem } from "../highlight/selector.js";
 import { PICK_HOST_ATTR, PICK_ROOT_ID } from "./constants.js";
-import { findIframeAtPoint, isPointInElement } from "../../lib/our/element-under-cursor.js";
+import { findIframeAtPoint, isPointInElement } from "./element-under-cursor.js";
 import { formatFrameElementLabel } from "./element-label.js";
 import { getCachedFrameClickToCopyLabel, getCachedFrameLabelStyle, subscribeFrameLabelStyleChange } from "../settings/format-settings-cache.js";
 import { sendToBackground } from "../messages.js";
