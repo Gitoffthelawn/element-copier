@@ -13,10 +13,15 @@
      so api.js sees globalThis.chrome when it initialises ext. -->
 <script>
   (function() {
+    var params = new URLSearchParams(location.search);
+    var locale = params.get('locale') || 'en';
+    var tab = params.get('tab') || 'copied';
+    var dark = params.get('dark') === '1';
     var LOCAL = {
       pickCopyCache: {
         text:           '<article id="article-body" class="content">How to Get Started</article>',
         selector:       '#article-body',
+        tagIdClass:     'article#article-body.content',
         outerHTML:      '<article id="article-body" class="content">…</article>',
         markdown:       '# How to Get Started\n\nPublished · 5 min read\n\nLorem ipsum dolor sit amet…',
         jsPath:         'document.querySelector("#article-body")',
@@ -24,6 +29,9 @@
         fullXPath:      '/html/body/div[3]/main/article',
         declaredStyles: '--accent-color-base: #36c; --color-fg-default: #1f2328;',
         computedStyles: 'accent-color: auto; align-content: normal; align-items: normal;',
+        qaDetails:      'article#article-body.content\nhttps://example.com/article',
+        png:            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=',
+        jpeg:           'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////2wBDAf//////////////////////////////////////////////////////////////////////////////////////wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAH/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/9oACAEBAAE/ACP/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oACAEDAQE/ACH/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oACAECAQE/ACH/2gAMAwEAAhEDEQA/AAf/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/9oACAEBAAY/ACH/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/9oACAEBAAE/ACH/2gAIAQEAAT8h/9k=',
         url:            'https://example.com/article',
       },
       pickCopyCacheFormats: [
@@ -32,8 +40,8 @@
         'declaredStyles','computedStyles',
       ],
       pickCopyMeta: { tagName: 'article', hostname: 'example.com', url: 'https://example.com/article' },
-      locale: 'en',
-      darkThemeEnabled: false,
+      locale: locale,
+      darkThemeEnabled: dark,
       developerToolsEnabled: true,
     };
 
@@ -103,9 +111,12 @@
 <script type="module">
   import { PANEL_CSS }          from '../extension/app/panel-popup/panel-css.js';
   import { createPanelSurface } from '../extension/app/panel-popup/build-panel-surface.js';
-  import { buildCopiedPanelBody } from '../extension/app/panel-popup/panel-body.js';
+  import { buildCopiedPanelBody, buildSettingsPanelBody } from '../extension/app/panel-popup/panel-body.js';
   import { t }                  from '../extension/app/i18n/strings.js';
 
+  const params = new URLSearchParams(location.search);
+  const locale = params.get('locale') || 'en';
+  const tab = params.get('tab') || 'copied';
   const WIDTH_PX = 445;   // measured fallback width (matches real popup)
 
   // Apply popup width to document so CSS calc() works correctly
@@ -115,6 +126,7 @@
   const host = document.createElement('div');
   host.id = 'element-copier-root';
   host.className = 'ec-panel-popup';
+  host.classList.toggle('ec-panel-popup--dark', params.get('dark') === '1');
   host.setAttribute('data-element-copier-ui', 'true');
   host.style.cssText =
     `display:block;width:${WIDTH_PX}px;min-height:0;height:auto;` +
@@ -128,15 +140,21 @@
   shadow.appendChild(styleEl);
 
   // Build panel surface and render COPIED tab
-  const locale = 'en';
   const strings = t(locale);
   const { panelRoot, body } = await createPanelSurface(locale, 'popup');
   shadow.appendChild(panelRoot);
-  await buildCopiedPanelBody(body, strings, {
-    onStartOver: () => {},
-    onPickElement: () => {},
-    onCopyPage: () => {},
-  });
+  if (tab === 'settings') {
+    await buildSettingsPanelBody(body, strings, {
+      getLocale: () => locale,
+      onLocaleSelect: () => {},
+    });
+  } else {
+    await buildCopiedPanelBody(body, strings, {
+      onStartOver: () => {},
+      onPickElement: () => {},
+      onCopyPage: () => {},
+    });
+  }
 
   // Signal readiness for Playwright
   document.documentElement.dataset.ready = 'true';

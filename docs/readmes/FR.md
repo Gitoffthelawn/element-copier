@@ -36,6 +36,8 @@ Pour les développeurs et les testeurs : URL, code HTML, tag#id.class, sélecteu
 
 <p align="center" id="screenshots">
   <a href="../publication/screenshots/FR-0.png"><img src="../publication/screenshots/FR-0.png" width="180" alt="Element Copier screenshot 1"></a>
+  <a href="../publication/screenshots/FR-1.png"><img src="../publication/screenshots/FR-1.png" width="180" alt="Element Copier screenshot 2"></a>
+  <a href="../publication/screenshots/FR-2.png"><img src="../publication/screenshots/FR-2.png" width="180" alt="Element Copier screenshot 3"></a>
 </p>
 
 ## FONCTIONNALITÉS PRINCIPALES

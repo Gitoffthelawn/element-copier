@@ -36,6 +36,8 @@ Für Entwickler und Tester: URLs, HTML-Code, tag#id.class, CSS-Selektoren, JS-Pf
 
 <p align="center" id="screenshots">
   <a href="../publication/screenshots/DE-0.png"><img src="../publication/screenshots/DE-0.png" width="180" alt="Element Copier screenshot 1"></a>
+  <a href="../publication/screenshots/DE-1.png"><img src="../publication/screenshots/DE-1.png" width="180" alt="Element Copier screenshot 2"></a>
+  <a href="../publication/screenshots/DE-2.png"><img src="../publication/screenshots/DE-2.png" width="180" alt="Element Copier screenshot 3"></a>
 </p>
 
 ## HAUPTFUNKTIONEN

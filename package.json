@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "screenshots:i18n": "node scripts/gen_screenshots_i18n.mjs"
+  },
   "devDependencies": {
     "canvas": "^3.2.3",
     "playwright": "^1.60.0"

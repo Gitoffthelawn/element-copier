@@ -36,6 +36,8 @@
 
 <p align="center" id="screenshots">
   <a href="../publication/screenshots/AR-0.png"><img src="../publication/screenshots/AR-0.png" width="180" alt="Element Copier screenshot 1"></a>
+  <a href="../publication/screenshots/AR-1.png"><img src="../publication/screenshots/AR-1.png" width="180" alt="Element Copier screenshot 2"></a>
+  <a href="../publication/screenshots/AR-2.png"><img src="../publication/screenshots/AR-2.png" width="180" alt="Element Copier screenshot 3"></a>
 </p>
 
 ## الميزات الرئيسية
