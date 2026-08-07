@@ -8,26 +8,10 @@ FEATURES
 - Light and dark themes,
 - Flexible settings.
 
-SUPPORTED FORMATS
-- Rich text for pasting into Google Docs and Word,
-- Images (PNG, JPEG),
-- Markdown,
-- Page source code,
-- Many formats for developers and testers:
-   - HTML,
-   - Tag#id.class,
-   - Selector,
-   - JS path,
-   - XPath,
-   - full XPath,
-   - declared and computed styles,
-   - QA details for bug reports.
+COPY FORMATS
+For working with content: text ready to paste into documents, PNG or JPEG images, and marked-up text for notes and documentation (Markdown).
+For development, testing, and bug reports: page and selected element code, its styles, and ways to identify the element precisely: CSS selector, JS path, XPath, full XPath, or tag#id.class.
 
 SECURITY
 - Does not track users,
 - Does not collect or transmit data.
-
-INTERFACE LANGUAGES
-English, French, German, Spanish, Russian, Arabic, Simplified Chinese.
-
-I really hope this extension will be useful to you 🙌

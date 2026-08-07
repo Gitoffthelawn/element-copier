@@ -8,26 +8,10 @@ FUNKTIONEN
 - Helles und dunkles Design,
 - Flexible Einstellungen.
 
-UNTERSTÜTZTE FORMATE
-- Rich Text zum Einfügen in Google Docs und Word,
-- Bilder (PNG, JPEG),
-- Markdown,
-- Seitenquellcode,
-- Viele Formate für Entwickler und Tester:
-   - HTML,
-   - Tag#id.class,
-   - Selektor,
-   - JS-Pfad,
-   - XPath,
-   - vollständiger XPath,
-   - deklarierte und berechnete Styles,
-   - QA-Details für Fehlerberichte.
+KOPIERFORMATE
+Für die Arbeit mit Inhalten: Text zum Einfügen in Dokumente, PNG- oder JPEG-Bilder sowie Text mit Auszeichnung für Notizen und Dokumentation (Markdown).
+Für Entwicklung, Tests und Fehlerberichte: Code der Seite und des ausgewählten Elements, dessen Stile und Möglichkeiten, das Element eindeutig zu identifizieren: CSS-Selektor, JS-Pfad, XPath, vollständiger XPath oder tag#id.class.
 
 SICHERHEIT
 - Verfolgt keine Benutzer,
 - Erfasst und überträgt keine Daten.
-
-OBERFLÄCHENSPRACHEN
-Englisch, Französisch, Deutsch, Spanisch, Russisch, Arabisch, vereinfachtes Chinesisch.
-
-Ich hoffe sehr, dass diese Erweiterung für Sie nützlich sein wird 🙌

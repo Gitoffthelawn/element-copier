@@ -8,26 +8,10 @@ FUNCIONES
 - Temas claro y oscuro,
 - Ajustes flexibles.
 
-FORMATOS COMPATIBLES
-- Texto enriquecido para pegar en Google Docs y Word,
-- Imágenes (PNG, JPEG),
-- Markdown,
-- Código fuente de la página,
-- Muchos formatos para desarrolladores y testers:
-   - HTML,
-   - Tag#id.class,
-   - Selector,
-   - Ruta JS,
-   - XPath,
-   - XPath completo,
-   - estilos declarados y calculados,
-   - Detalles de QA para informes de errores.
+FORMATOS DE COPIA
+Para trabajar con contenido: texto listo para pegar en documentos, imágenes PNG o JPEG y texto con marcado para notas y documentación (Markdown).
+Para desarrollo, pruebas e informes de errores: código de la página y del elemento seleccionado, sus estilos y formas de identificar el elemento con precisión: selector CSS, ruta JS, XPath, XPath completo o tag#id.class.
 
 SEGURIDAD
 - No realiza seguimiento de los usuarios,
 - No recopila ni transmite datos.
-
-IDIOMAS DE LA INTERFAZ
-Inglés, francés, alemán, español, ruso, árabe, chino simplificado.
-
-Espero de verdad que esta extensión te resulte útil 🙌

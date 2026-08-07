@@ -8,26 +8,10 @@ FONCTIONNALITÉS
 - Thèmes clair et sombre,
 - Paramètres flexibles.
 
-FORMATS PRIS EN CHARGE
-- Texte enrichi pour le collage dans Google Docs et Word,
-- Images (PNG, JPEG),
-- Markdown,
-- Code source de la page,
-- De nombreux formats pour les développeurs et les testeurs :
-   - HTML,
-   - Tag#id.class,
-   - Sélecteur,
-   - Chemin JS,
-   - XPath,
-   - XPath complet,
-   - Styles déclarés et calculés,
-   - Détails QA pour les rapports de bugs.
+FORMATS DE COPIE
+Pour travailler avec le contenu : texte prêt à coller dans des documents, images PNG ou JPEG, et texte balisé pour les notes et la documentation (Markdown).
+Pour le développement, les tests et les rapports de bugs : code de la page et de l’élément sélectionné, ses styles et moyens d’identifier précisément l’élément : sélecteur CSS, chemin JS, XPath, XPath complet ou tag#id.class.
 
 SÉCURITÉ
 - Ne suit pas les utilisateurs,
 - Ne collecte ni ne transmet de données.
-
-LANGUES DE L'INTERFACE
-Anglais, français, allemand, espagnol, russe, arabe, chinois simplifié.
-
-J'espère vraiment que cette extension vous sera utile 🙌

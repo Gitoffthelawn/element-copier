@@ -1,6 +1,6 @@
 {
   "extDescription": {
-    "message": "轻点几下即可复制文本、Markdown、PNG、JPEG、HTML 代码、选择器、样式等更多内容。"
+    "message": "将页面元素复制为文本、图像、源代码等。"
   },
   "commandToggleCopy": {
     "message": "开\u00A0/\u00A0关： 1.\u00A0Ctrl+Shift+X\u00A0/\u00A0⇧⌘X 2.\u00A0松\u2060开\u00A0按键 3.\u00A0再\u2060按\u00A0C"
