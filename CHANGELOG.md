@@ -1,6 +1,6 @@
 # RELEASE LIST
 
-Regular SemVer logic.
+Regular SemVer logic. Review the [release requirements](RELEASE.md).
 
 ---
 
