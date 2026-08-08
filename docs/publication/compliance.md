@@ -44,6 +44,8 @@ The optional in-page prefix chord (Ctrl+Shift+X / ⌘⇧X, release, then C) list
 
 The `contextMenus` permission registers menu items on the extension toolbar button (browser action) so the user can open the start or copied panel, settings, shortcuts, or about screen from a right-click on the icon; menus are rebuilt when locale or copy state changes and do not add items to unrelated page context menus.
 
+The in-page element-selection menu is separate from the `contextMenus` permission. It is shown only after the user starts pick mode and right-clicks a highlighted element. The page-side script temporarily handles that user gesture to show the ancestor chain, preview elements on hover, and copy the item selected by the user; it does not create a persistent native browser context-menu item.
+
 ---
 
 ## Host permission

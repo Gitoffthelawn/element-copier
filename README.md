@@ -43,6 +43,7 @@ For developers and testers: URLs, HTML code, tag#id.class, CSS selectors, JS pat
 ## KEY FEATURES
 
 - Copy an entire page or a specific element
+- Choose any parent from the complete DOM ancestor chain through the in-page context menu
 - Convert content into multiple formats at once
 - Keep the latest copied content for all enabled formats
 - Copy content to the clipboard or download it as a file

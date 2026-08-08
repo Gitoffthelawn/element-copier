@@ -11,6 +11,7 @@ var HighlightSystem = class {
   lastPointerX = -1;
   lastPointerY = -1;
   highlightRefreshRaf = 0;
+  trackingPaused = false;
   boundMove;
   boundPointerMove;
   boundScroll;
@@ -31,6 +32,7 @@ var HighlightSystem = class {
     this.visual.bindExistingElements(elementLabelEl, highlightFrameEl);
   }
   activate() {
+    this.trackingPaused = false;
     this.visual.installPageStyles();
     this.lastPointerX = -1;
     this.lastPointerY = -1;
@@ -49,6 +51,7 @@ var HighlightSystem = class {
     window.addEventListener("resize", this.boundResize);
   }
   deactivate() {
+    this.trackingPaused = false;
     document.removeEventListener("mousemove", this.boundMove, true);
     document.removeEventListener("pointermove", this.boundPointerMove, true);
     document.removeEventListener("scroll", this.boundScroll, true);
@@ -66,6 +69,13 @@ var HighlightSystem = class {
   }
   getHighlighted() {
     return this.highlighted;
+  }
+  pauseTracking() {
+    this.trackingPaused = true;
+  }
+  resumeTracking() {
+    this.trackingPaused = false;
+    if (this.lastPointerX >= 0) this.updateHighlightAt(this.lastPointerX, this.lastPointerY);
   }
   clear() {
     if (this.highlighted) {
@@ -85,6 +95,7 @@ var HighlightSystem = class {
   updateHighlightAt(x, y) {
     this.lastPointerX = x;
     this.lastPointerY = y;
+    if (this.trackingPaused) return;
     const el = pickElementUnderCursor(x, y, {
       isOurNode: (node) => this.host.isOurNode(node)
     });

@@ -3,6 +3,7 @@ var FR_MESSAGES = {
   panelSubtitle: "extension de navigateur",
   titleSettings: "DÉMARRER",
   pickElementButtonLabel: "NOUVEL ÉLÉMENT",
+  pickParentContextMenuTitle: "Copier :",
   capturePageButtonLabel: "NOUVELLE PAGE",
   settingsDefaultActionLabel: "Action par défaut",
   settingsDefaultActionNothing: "RIEN",

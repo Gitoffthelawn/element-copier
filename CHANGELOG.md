@@ -6,6 +6,9 @@ Regular SemVer logic. Review the [release requirements](RELEASE.md).
 
 ## RELEASES
 
+### 1.4.0
+- Added an in-page context menu for selecting and copying any element from the complete DOM ancestor chain
+
 ### 1.3.4
 - Refined Chrome Web Store metadata and localized descriptions to clarify copy formats
 

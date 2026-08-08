@@ -43,6 +43,7 @@ Pour les développeurs et les testeurs : URL, code HTML, tag#id.class, sélecteu
 ## FONCTIONNALITÉS PRINCIPALES
 
 - Copier une page entière ou un élément précis
+- Sélectionner n’importe quel parent de la chaîne DOM complète via le menu contextuel de la page
 - Convertir le contenu dans plusieurs formats à la fois
 - Conserver le dernier contenu copié pour tous les formats activés
 - Copier le contenu dans le presse-papiers ou le télécharger sous forme de fichier

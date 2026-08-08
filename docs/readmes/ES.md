@@ -43,6 +43,7 @@ Para desarrolladores y testers: URL, código HTML, tag#id.class, selectores CSS,
 ## FUNCIONES PRINCIPALES
 
 - Copiar una página completa o un elemento específico
+- Elegir cualquier elemento padre de la cadena DOM completa mediante el menú contextual de la página
 - Convertir contenido a varios formatos a la vez
 - Conservar el último contenido copiado para todos los formatos habilitados
 - Copiar contenido al portapapeles o descargarlo como archivo

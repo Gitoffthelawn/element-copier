@@ -3,6 +3,7 @@ var ES_MESSAGES = {
   panelSubtitle: "extensión de navegador",
   titleSettings: "INICIO",
   pickElementButtonLabel: "NUEVO ELEMENTO",
+  pickParentContextMenuTitle: "Copiar:",
   capturePageButtonLabel: "NUEVA PÁGINA",
   settingsDefaultActionLabel: "Acción predeterminada",
   settingsDefaultActionNothing: "NADA",

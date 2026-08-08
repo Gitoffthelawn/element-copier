@@ -3,6 +3,7 @@ var AR_MESSAGES = {
   panelSubtitle: "إضافة المتصفح",
   titleSettings: "البدء",
   pickElementButtonLabel: "عنصر جديد",
+  pickParentContextMenuTitle: "نسخ:",
   capturePageButtonLabel: "صفحة جديدة",
   settingsDefaultActionLabel: "الإجراء الافتراضي",
   settingsDefaultActionNothing: "لا شيء",

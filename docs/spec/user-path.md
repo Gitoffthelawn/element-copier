@@ -25,6 +25,19 @@ E = Extension
 
 The earlier steps of the main flow are skipped.
 
+### Choose a parent from the in-page context menu
+
+1. U starts E and hovers over an element
+2. E highlights the element
+3. U clicks the right mouse button
+4. E opens an in-page menu with the complete ancestor chain from `html` to `THIS ELEMENT`
+5. U hovers over a menu item
+6. E highlights the corresponding element on the page
+7. U clicks the menu item
+8. E copies the selected element, closes the menu, and continues the standard copy flow
+
+Clicking outside the menu or navigating to another page closes the menu without copying. Escape keeps its existing behavior and disables E.
+
 ### Cache
 
 1. U copies content

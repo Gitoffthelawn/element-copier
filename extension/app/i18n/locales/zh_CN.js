@@ -3,6 +3,7 @@ var ZH_CN_MESSAGES = {
   panelSubtitle: "浏览器扩展",
   titleSettings: "开始",
   pickElementButtonLabel: "新元素",
+  pickParentContextMenuTitle: "复制：",
   capturePageButtonLabel: "新页面",
   settingsDefaultActionLabel: "默认操作",
   settingsDefaultActionNothing: "无",

@@ -10,6 +10,7 @@ var EN_MESSAGES = {
   panelSubtitle: "browser extension",
   titleSettings: "START",
   pickElementButtonLabel: "NEW ELEMENT",
+  pickParentContextMenuTitle: "Copy:",
   capturePageButtonLabel: "NEW PAGE",
   settingsDefaultActionLabel: "Default action",
   settingsDefaultActionNothing: "NOTHING",

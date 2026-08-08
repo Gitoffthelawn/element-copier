@@ -3,6 +3,7 @@ var RU_MESSAGES = {
   panelSubtitle: "расширение для браузера",
   titleSettings: "СТАРТ",
   pickElementButtonLabel: "НОВЫЙ ЭЛЕМЕНТ",
+  pickParentContextMenuTitle: "Копировать:",
   capturePageButtonLabel: "НОВАЯ СТРАНИЦА",
   settingsDefaultActionLabel: "Действие по умолчанию",
   settingsDefaultActionNothing: "НИЧЕГО",

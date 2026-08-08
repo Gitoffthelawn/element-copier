@@ -2,6 +2,7 @@
 
 import { createHighlightUiClasses } from "../../extension/app/highlight/classes.js";
 import { pickElementUnderCursor } from "../../extension/app/pick-mode/element-under-cursor.js";
+import { formatTagIdClassLabel } from "../../extension/app/pick-mode/element-label.js";
 
 const { assertEqual, test } = TestHarness;
 
@@ -45,5 +46,14 @@ test("pick mode skips extension-owned nodes in the hit-test stack", () => {
   });
 
   assertEqual(picked, button);
+  fixture.remove();
+});
+
+test("parent context labels retain the element identity", () => {
+  const fixture = document.createElement("div");
+  fixture.id = "parent-context-fixture";
+  fixture.className = "one two";
+  document.body.append(fixture);
+  assertEqual(formatTagIdClassLabel(fixture), "div#parent-context-fixture");
   fixture.remove();
 });

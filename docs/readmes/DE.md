@@ -43,6 +43,7 @@ Für Entwickler und Tester: URLs, HTML-Code, tag#id.class, CSS-Selektoren, JS-Pf
 ## HAUPTFUNKTIONEN
 
 - Ganze Seite oder bestimmtes Element kopieren
+- Jedes übergeordnete Element aus der vollständigen DOM-Hierarchie über das Kontextmenü auf der Seite auswählen
 - Inhalte gleichzeitig in mehrere Formate konvertieren
 - Zuletzt kopierte Inhalte für alle aktivierten Formate speichern
 - Inhalte in die Zwischenablage kopieren oder als Datei herunterladen

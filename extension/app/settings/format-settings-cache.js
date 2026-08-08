@@ -16,6 +16,8 @@ var cachedFrameLabelStyle = DEFAULT_FRAME_LABEL_STYLE;
 
 var cachedFrameClickToCopyLabel = t("en").settingsFrameLabelClickToCopy;
 
+var cachedPickParentContextMenuTitle = t("en").pickParentContextMenuTitle;
+
 var bound = false;
 
 var frameLabelStyleChangeListeners = /* @__PURE__ */ new Set();
@@ -40,6 +42,10 @@ function getCachedFrameClickToCopyLabel() {
   return cachedFrameClickToCopyLabel;
 }
 
+function getCachedPickParentContextMenuTitle() {
+  return cachedPickParentContextMenuTitle;
+}
+
 function subscribeFrameLabelStyleChange(listener) {
   frameLabelStyleChangeListeners.add(listener);
   return () => frameLabelStyleChangeListeners.delete(listener);
@@ -61,6 +67,7 @@ async function refreshFormatSettingsCache() {
   cachedFrameLabelStyle = await getFrameLabelStyle();
   const locale = await getLocale();
   cachedFrameClickToCopyLabel = t(locale).settingsFrameLabelClickToCopy;
+  cachedPickParentContextMenuTitle = t(locale).pickParentContextMenuTitle;
   if (shouldRefreshFrameLabel(previousFrameLabelStyle, previousClickToCopyLabel)) {
     for (const listener of frameLabelStyleChangeListeners) {
       listener();
@@ -80,4 +87,4 @@ function bindFormatSettingsCache() {
   });
 }
 
-export { bindFormatSettingsCache, bound, cachedDefaultAction, cachedEnabledFormats, cachedFrameClickToCopyLabel, cachedFrameLabelStyle, cachedInlineImagesMode, frameLabelStyleChangeListeners, getCachedDefaultAction, getCachedEnabledFormats, getCachedFrameClickToCopyLabel, getCachedFrameLabelStyle, getCachedInlineImagesMode, refreshFormatSettingsCache, shouldRefreshFrameLabel, subscribeFrameLabelStyleChange };
+export { bindFormatSettingsCache, bound, cachedDefaultAction, cachedEnabledFormats, cachedFrameClickToCopyLabel, cachedFrameLabelStyle, cachedInlineImagesMode, frameLabelStyleChangeListeners, getCachedDefaultAction, getCachedEnabledFormats, getCachedFrameClickToCopyLabel, getCachedFrameLabelStyle, getCachedInlineImagesMode, getCachedPickParentContextMenuTitle, refreshFormatSettingsCache, shouldRefreshFrameLabel, subscribeFrameLabelStyleChange };

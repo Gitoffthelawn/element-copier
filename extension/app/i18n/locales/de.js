@@ -3,6 +3,7 @@ var DE_MESSAGES = {
   panelSubtitle: "Browser-Erweiterung",
   titleSettings: "START",
   pickElementButtonLabel: "NEUES ELEMENT",
+  pickParentContextMenuTitle: "Kopieren:",
   capturePageButtonLabel: "NEUE SEITE",
   settingsDefaultActionLabel: "Standardaktion",
   settingsDefaultActionNothing: "NICHTS",
