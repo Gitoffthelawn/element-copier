@@ -53,6 +53,10 @@ var selectionBadgeAnimationIntervals = /* @__PURE__ */ new Map();
 
 var selectionBadgeAnimationFrame = /* @__PURE__ */ new Map();
 
+var selectionBadgeAnimationUpdates = /* @__PURE__ */ new Map();
+
+var badgeTextColorSupported = typeof ext.action.setBadgeTextColor === "function";
+
 function clearBlockedBadgeTimer(tabId) {
   const timer = blockedBadgeClearTimers.get(tabId);
   if (timer === void 0) return;
@@ -72,6 +76,7 @@ function clearSelectionBadgeAnimation(tabId) {
     selectionBadgeAnimationIntervals.delete(tabId);
   }
   selectionBadgeAnimationFrame.delete(tabId);
+  selectionBadgeAnimationUpdates.delete(tabId);
 }
 
 function ensureSelectionBadgeAnimation(tabId) {
@@ -79,19 +84,29 @@ function ensureSelectionBadgeAnimation(tabId) {
   selectionBadgeAnimationFrame.set(tabId, 0);
   selectionBadgeAnimationIntervals.set(
     tabId,
-    setInterval(() => {
+    setInterval(async () => {
       if (!getTabActiveState(tabId)) {
         clearSelectionBadgeAnimation(tabId);
         return;
       }
+      if (selectionBadgeAnimationUpdates.has(tabId)) return;
       const currentFrame = selectionBadgeAnimationFrame.get(tabId) ?? 0;
       selectionBadgeAnimationFrame.set(
         tabId,
         selectionBadgeTextAnimation.nextFrame(currentFrame)
       );
-      void syncToolbarBadge(tabId);
+      await syncToolbarBadge(tabId);
     }, selectionBadgeTextAnimation.stepIntervalMs)
   );
+}
+
+async function setBadgeTextColor(tabId, color) {
+  if (!badgeTextColorSupported) return;
+  try {
+    await ext.action.setBadgeTextColor({ tabId, color });
+  } catch {
+    badgeTextColorSupported = false;
+  }
 }
 
 function onBlockedNoticeDismissed(tabId) {
@@ -126,11 +141,7 @@ async function setToolbarBadge(tabId, text, backgroundColor = BADGE_SELECTION_BA
   try {
     if (text) {
       await ext.action.setBadgeBackgroundColor({ tabId, color: backgroundColor });
-      // Firefox 140 rejects action.setBadgeTextColor even for valid ColorArray
-      // values. Its automatic contrast keeps this cosmetic hint readable.
-      if (typeof browser === "undefined") {
-        await ext.action.setBadgeTextColor?.({ tabId, color: textColor });
-      }
+      await setBadgeTextColor(tabId, textColor);
     }
     await ext.action.setBadgeText({ tabId, text });
   } catch (err) {
@@ -155,13 +166,22 @@ async function syncToolbarBadge(tabId) {
   }
   if (getTabActiveState(tabId)) {
     ensureSelectionBadgeAnimation(tabId);
+    if (selectionBadgeAnimationUpdates.has(tabId)) return;
+    const update = Symbol();
+    selectionBadgeAnimationUpdates.set(tabId, update);
     const frame = selectionBadgeAnimationFrame.get(tabId) ?? 0;
-    await setToolbarBadge(
-      tabId,
-      BADGE_SELECTION_TEXT,
-      BADGE_SELECTION_BACKGROUND_COLOR,
-      selectionBadgeTextAnimation.getColor(frame)
-    );
+    try {
+      await setToolbarBadge(
+        tabId,
+        BADGE_SELECTION_TEXT,
+        BADGE_SELECTION_BACKGROUND_COLOR,
+        selectionBadgeTextAnimation.getColor(frame)
+      );
+    } finally {
+      if (selectionBadgeAnimationUpdates.get(tabId) === update) {
+        selectionBadgeAnimationUpdates.delete(tabId);
+      }
+    }
     return;
   }
   if (tabCopiedBadge.get(tabId)) {

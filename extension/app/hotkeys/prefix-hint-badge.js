@@ -5,6 +5,17 @@ var PREFIX_BADGE_BACKGROUND_COLOR = "#012292";
 
 var PREFIX_BADGE_TEXT_COLOR = [255, 255, 255, 255];
 
+var badgeTextColorSupported = typeof ext.action.setBadgeTextColor === "function";
+
+async function setBadgeTextColor(details) {
+  if (!badgeTextColorSupported) return;
+  try {
+    await ext.action.setBadgeTextColor(details);
+  } catch {
+    badgeTextColorSupported = false;
+  }
+}
+
 async function showPrefixBadge(letter, tabId, backgroundColor = PREFIX_BADGE_BACKGROUND_COLOR, textColor = PREFIX_BADGE_TEXT_COLOR) {
   const text = letter.toUpperCase().slice(0, 4);
   const tabDetails = tabId !== void 0 ? { tabId } : {};
@@ -13,9 +24,7 @@ async function showPrefixBadge(letter, tabId, backgroundColor = PREFIX_BADGE_BAC
       ...tabDetails,
       color: backgroundColor
     });
-    if (typeof browser === "undefined") {
-      await ext.action.setBadgeTextColor?.({ ...tabDetails, color: textColor });
-    }
+    await setBadgeTextColor({ ...tabDetails, color: textColor });
     await ext.action.setBadgeText({ ...tabDetails, text });
   } catch (err) {
     console.debug("[prefix-hint] setBadgeText failed:", err);
