@@ -28,7 +28,8 @@ async function canOperateOnTab(tabId, frameId) {
       func: probeDocumentOperability
     });
     return result?.result === true;
-  } catch {
+  } catch (error) {
+    console.debug("[Element Copier] page operability probe failed:", error);
     return false;
   }
 }

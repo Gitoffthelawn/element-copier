@@ -7,7 +7,7 @@ function mixColor(from, to, ratio) {
   const r = Math.round(from[0] + (to[0] - from[0]) * normalizedRatio);
   const g = Math.round(from[1] + (to[1] - from[1]) * normalizedRatio);
   const b = Math.round(from[2] + (to[2] - from[2]) * normalizedRatio);
-  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+  return [r, g, b, 255];
 }
 
 function normalizeFrame(frame, totalFrames) {

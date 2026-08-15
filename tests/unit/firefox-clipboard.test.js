@@ -16,6 +16,22 @@ test("manifest requests clipboardWrite for Firefox async copy flows", async () =
     Array.isArray(manifest.permissions) && manifest.permissions.includes("clipboardWrite"),
     "manifest must request clipboardWrite so Firefox can copy after async pick/cache work."
   );
+  assert(
+    manifest.action?.default_popup === "panel-popup-page.html",
+    "toolbar clicks must use Firefox's native popup path."
+  );
+
+  const loaderSource = await readProjectFile("extension/app/content/loader.js");
+  assert(
+    /\.then\(\(\) => null\)/.test(loaderSource),
+    "content loader must not return a module namespace from scripting.executeScript in Firefox."
+  );
+
+  const panelPopupSource = await readProjectFile("extension/app/panel-popup/open-action-popup.js");
+  assert(
+    /popup: "panel-popup-page\.html"/.test(panelPopupSource),
+    "temporary panel popups must restore the manifest popup for later toolbar clicks."
+  );
 });
 
 test("plain-text clipboard copy prefers execCommand on insecure pages", async () => {

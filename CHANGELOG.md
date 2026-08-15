@@ -6,6 +6,11 @@ Regular SemVer logic. Review the [release requirements](RELEASE.md).
 
 ## RELEASES
 
+### 1.5.0
+- Raised the minimum supported Firefox version to 140 because `data_collection_permissions` is supported from Firefox 140 (released June 24, 2025).
+- This interim release restores copying and the context menu on Firefox 140; popup reopening after copying and image generation require Firefox 149+.
+- Firefox 140–148 support copying and the context menu; popup reopening after copying require Firefox 149+.
+
 ### 1.4.0
 - Added an in-page context menu for selecting and copying any element from the complete DOM ancestor chain
 

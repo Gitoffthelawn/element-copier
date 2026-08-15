@@ -12,9 +12,7 @@ function openPanelInActionPopup2(panelTab, target) {
   openPanelInActionPopup(
     PANEL_PAGE_CONFIG,
     panelTab,
-    target,
-    async () => {
-    }
+    target
   );
 }
 

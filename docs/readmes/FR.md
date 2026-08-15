@@ -85,6 +85,8 @@ Pour les développeurs et les testeurs : URL, code HTML, tag#id.class, sélecteu
 
 ## LIMITATIONS
 
+- Firefox 140+ est requis, car cette extension utilise la propriété de manifeste `data_collection_permissions` ; Firefox v139 et les versions antérieures ne sont pas pris en charge.
+- Firefox 140–148 prennent en charge la copie et le menu contextuel ; la réouverture de la fenêtre contextuelle après la copie nécessite Firefox 149+.
 - **La sélection d'une iframe diffère** de celle des autres éléments :
    - L'iframe est sélectionnée dans son ensemble
       - Cela est dû à une limitation de la plateforme

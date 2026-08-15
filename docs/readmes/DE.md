@@ -85,6 +85,8 @@ Für Entwickler und Tester: URLs, HTML-Code, tag#id.class, CSS-Selektoren, JS-Pf
 
 ## EINSCHRÄNKUNGEN
 
+- Firefox 140+ ist erforderlich, weil diese Erweiterung die Manifest-Eigenschaft `data_collection_permissions` verwendet; Firefox v139 und älter werden nicht unterstützt.
+- Firefox 140–148 unterstützen das Kopieren und das Kontextmenü; das erneute Öffnen des Pop-ups nach dem Kopieren erfordert Firefox 149+.
 - **Die Auswahl von Iframes unterscheidet sich** von der Auswahl anderer Elemente:
    - Das Iframe wird als Ganzes ausgewählt
       - Dies liegt an einer Plattformbeschränkung

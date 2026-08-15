@@ -85,6 +85,8 @@ For developers and testers: URLs, HTML code, tag#id.class, CSS selectors, JS pat
 
 ## LIMITATIONS
 
+- Firefox 140+ is required because this extension uses the `data_collection_permissions` manifest property; Firefox v139 and less are unsupported.
+- Firefox 140–148 support copying and the context menu; popup reopening after copying require Firefox 149+.
 - **Iframe selection differs** from the selection of other elements:
    - The iframe is selected as a whole
       - This is due to a platform limitation

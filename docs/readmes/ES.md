@@ -85,6 +85,8 @@ Para desarrolladores y testers: URL, código HTML, tag#id.class, selectores CSS,
 
 ## LIMITACIONES
 
+- Se requiere Firefox 140+ porque esta extensión usa la propiedad de manifiesto `data_collection_permissions`; Firefox v139 y anteriores no son compatibles.
+- Firefox 140–148 admiten la copia y el menú contextual; volver a abrir la ventana emergente después de copiar requiere Firefox 149+.
 - **La selección de iframes es diferente** a la de otros elementos:
    - El iframe se selecciona como un todo
       - Esto se debe a una limitación de la plataforma

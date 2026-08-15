@@ -5,11 +5,11 @@ import { getRestrictedNoticeDismissMs, showRestrictedNotice } from "./page-opera
 import { getTabActiveState } from "./extension-icon-state/tab-active-state.js";
 import { registerPrefixHintBadgeListeners } from "./hotkeys/prefix-hint-badge.js";
 
-var BADGE_TEXT_COLOR = "#ffffff";
+var BADGE_TEXT_COLOR = [255, 255, 255, 255];
 
 var BADGE_PREFIX_BACKGROUND_COLOR = "#ffffff";
 
-var BADGE_PREFIX_TEXT_COLOR = COPIER_ACTIVE_COLOR;
+var BADGE_PREFIX_TEXT_COLOR = [1, 34, 146, 255];
 
 var BADGE_SELECTION_BACKGROUND_COLOR = COPIER_ACTIVE_COLOR;
 
@@ -17,13 +17,13 @@ var BADGE_COPIED_BACKGROUND_COLOR = "#008000";
 
 var BADGE_BLOCKED_BACKGROUND_COLOR = "#d3d3d3";
 
-var BADGE_BLOCKED_TEXT_COLOR = "#4a4a4a";
+var BADGE_BLOCKED_TEXT_COLOR = [74, 74, 74, 255];
 
 var BADGE_SELECTION_TEXT = "◉";
 
-var BADGE_SELECTION_TEXT_COLOR_WHITE = [255, 255, 255];
+var BADGE_SELECTION_TEXT_COLOR_WHITE = [255, 255, 255, 255];
 
-var BADGE_SELECTION_TEXT_COLOR_BLUE = [1, 34, 146];
+var BADGE_SELECTION_TEXT_COLOR_BLUE = [1, 34, 146, 255];
 
 var BADGE_COPIED_TEXT = "✓";
 
@@ -126,8 +126,11 @@ async function setToolbarBadge(tabId, text, backgroundColor = BADGE_SELECTION_BA
   try {
     if (text) {
       await ext.action.setBadgeBackgroundColor({ tabId, color: backgroundColor });
-      const setBadgeTextColor = ext.action.setBadgeTextColor;
-      await setBadgeTextColor?.({ tabId, color: textColor });
+      // Firefox 140 rejects action.setBadgeTextColor even for valid ColorArray
+      // values. Its automatic contrast keeps this cosmetic hint readable.
+      if (typeof browser === "undefined") {
+        await ext.action.setBadgeTextColor?.({ tabId, color: textColor });
+      }
     }
     await ext.action.setBadgeText({ tabId, text });
   } catch (err) {

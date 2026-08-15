@@ -85,6 +85,8 @@
 
 ## 限制
 
+- 此扩展程序使用 `data_collection_permissions` 清单属性，因此需要 Firefox 140+；不支持 Firefox v139 及更早版本。
+- Firefox 140–148 支持复制和上下文菜单；复制后重新打开弹出窗口需要 Firefox 149+。
 - **iframe 的选择方式与其他元素不同：**
    - iframe 会作为一个整体被选择
       - 这是平台限制所致
