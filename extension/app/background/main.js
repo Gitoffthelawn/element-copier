@@ -11,7 +11,7 @@ import { ext } from "../api.js";
 import { getTabActiveState, setTabActiveState } from "../extension-icon-state/tab-active-state.js";
 import { isBlockedNoticeDismissedMessage } from "../page-operability/messages.js";
 import { openCopiedPanelFromCopy, openPanelFromSender, openStartPanelFromToolbar } from "../panel-popup/open.js";
-import { readPanelTargetTabId, rememberPanelTargetTab } from "../panel-popup/panel-target-tab.js";
+import { readPanelTargetTabId, rememberPanelTargetTab, selectPanelTargetTabId } from "../panel-popup/panel-target-tab.js";
 import { refreshRestrictedNoticeCache } from "../page-operability/notice.js";
 import { registerBackgroundHotkeys, shouldSuppressToolbarClickAfterHotkeyCommand } from "../hotkeys/background.js";
 import { registerPrefixHintOperabilityListeners } from "../hotkeys/prefix-operability.js";
@@ -156,13 +156,16 @@ function isExtensionPanelSenderUrl(url) {
 
 async function resolvePickModeTabId(sender) {
   const senderUrl = sender.tab?.url;
-  if (sender.tab?.id !== void 0 && !isExtensionPanelSenderUrl(senderUrl)) {
-    return sender.tab.id;
-  }
+  const senderIsExtensionPanel = isExtensionPanelSenderUrl(senderUrl);
+  if (sender.tab?.id !== void 0 && !senderIsExtensionPanel) return sender.tab.id;
   const remembered = await readPanelTargetTabId();
-  if (remembered !== void 0) return remembered;
   const tab = await getActiveCommandTab();
-  return tab?.id;
+  return selectPanelTargetTabId({
+    senderTabId: sender.tab?.id,
+    senderIsExtensionPanel,
+    rememberedTabId: remembered,
+    activeTabId: tab?.id
+  });
 }
 
 async function getPickCopyTextForPanel(formatId, sender) {

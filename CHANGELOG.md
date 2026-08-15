@@ -7,6 +7,7 @@ Regular SemVer logic. Review the [release requirements](RELEASE.md).
 ## RELEASES
 
 ### 1.5.0
+- Fixed Firefox popup launches targeting a previously used tab instead of the current active tab.
 - Unified PNG and JPEG generation on a single canvas across browsers, fixing image generation in Firefox.
 - Restored animated toolbar badge colors in Chrome and Firefox.
 - Raised the minimum supported Firefox version to 140 because `data_collection_permissions` is supported from Firefox 140 (released June 24, 2025).

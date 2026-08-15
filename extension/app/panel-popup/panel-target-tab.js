@@ -12,4 +12,25 @@ async function readPanelTargetTabId() {
   return typeof id === "number" ? id : void 0;
 }
 
-export { PANEL_TARGET_TAB_SESSION_KEY, readPanelTargetTabId, rememberPanelTargetTab };
+function selectPanelTargetTabId(options) {
+  if (
+    options.senderTabId !== void 0 &&
+    !options.senderIsExtensionPanel
+  ) {
+    return options.senderTabId;
+  }
+  // Native action popups are extension documents without sender.tab. Their
+  // target is the tab that is active behind the popup, not a target retained
+  // by an earlier popup session.
+  if (options.senderTabId === void 0) {
+    return options.activeTabId;
+  }
+  return options.rememberedTabId ?? options.activeTabId;
+}
+
+export {
+  PANEL_TARGET_TAB_SESSION_KEY,
+  readPanelTargetTabId,
+  rememberPanelTargetTab,
+  selectPanelTargetTabId
+};
