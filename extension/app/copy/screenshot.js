@@ -151,31 +151,27 @@ function isImageCopyFormat(formatId) {
   return IMAGE_FORMATS.has(formatId);
 }
 
-function createCanvasFromSource(source) {
-  const doc = source.ownerDocument;
-  const canvas = doc.createElement("canvas");
-  canvas.width = source.width;
-  canvas.height = source.height;
-  return canvas;
-}
-
 function encodePng(canvas) {
   return canvas.toDataURL("image/png");
 }
 
 function encodeJpeg(renderedCanvas, backgroundSnapshot) {
-  const jpegCanvas = createCanvasFromSource(renderedCanvas);
-  const context = jpegCanvas.getContext("2d");
-  if (!context) {
-    throw new Error("Failed to get 2d context for JPEG composition");
-  }
   const fillColor = resolveJpegCompositeFillColor(backgroundSnapshot);
   if (fillColor) {
-    context.fillStyle = fillColor;
-    context.fillRect(0, 0, jpegCanvas.width, jpegCanvas.height);
+    const context = renderedCanvas.getContext("2d");
+    if (!context) {
+      throw new Error("Failed to get 2d context for JPEG composition");
+    }
+    context.save();
+    try {
+      context.globalCompositeOperation = "destination-over";
+      context.fillStyle = fillColor;
+      context.fillRect(0, 0, renderedCanvas.width, renderedCanvas.height);
+    } finally {
+      context.restore();
+    }
   }
-  context.drawImage(renderedCanvas, 0, 0);
-  return jpegCanvas.toDataURL("image/jpeg", 0.92);
+  return renderedCanvas.toDataURL("image/jpeg", 0.92);
 }
 
 async function captureElementImages(element, formats, backgroundSnapshot) {
@@ -195,4 +191,4 @@ async function captureElementImages(element, formats, backgroundSnapshot) {
   return result;
 }
 
-export { FETCH_PLACEHOLDER_IMAGE, IMAGE_FORMATS, TRANSPARENT_CANVAS_FALLBACK, captureElementImages, createCanvasFromSource, createScreenshotBackgroundSnapshot, cssAlphaIsZero, encodeJpeg, encodePng, getBackgroundFromComputedStyleSnapshot, getComputedStyleSnapshotProperty, getEffectiveBackground, getElementBackground, getParentElement, getRenderOptions, isEmptyBackgroundImage, isImageCopyFormat, isTransparentBackground, resolveJpegCompositeFillColor };
+export { FETCH_PLACEHOLDER_IMAGE, IMAGE_FORMATS, TRANSPARENT_CANVAS_FALLBACK, captureElementImages, createScreenshotBackgroundSnapshot, cssAlphaIsZero, encodeJpeg, encodePng, getBackgroundFromComputedStyleSnapshot, getComputedStyleSnapshotProperty, getEffectiveBackground, getElementBackground, getParentElement, getRenderOptions, isEmptyBackgroundImage, isImageCopyFormat, isTransparentBackground, resolveJpegCompositeFillColor };
