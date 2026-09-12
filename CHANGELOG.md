@@ -9,6 +9,7 @@ Regular SemVer logic. Review the [release requirements](RELEASE.md).
 ### 1.6.0
 - Added a Recommend page with direct Chrome and Firefox store actions to open, copy, or share the extension link.
 - Added Recommend as the last item in the extension panel and toolbar context menus.
+- Aligned the Settings, About, and Recommend page headings.
 
 ### 1.5.0
 - Fixed Firefox popup launches targeting a previously used tab instead of the current active tab.
