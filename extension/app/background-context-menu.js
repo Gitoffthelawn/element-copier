@@ -11,12 +11,14 @@ var CONTEXT_MENU_COPIED = "element-copier-copied";
 var CONTEXT_MENU_SETTINGS = "element-copier-settings";
 
 var CONTEXT_MENU_ABOUT = "element-copier-about";
+var CONTEXT_MENU_RECOMMEND = "element-copier-recommend";
 
 var ACTION_MENU_EMOJI = {
   start: "▶️",
   copied: "🗂️",
   settings: "⚙️",
-  about: "ℹ️"
+  about: "ℹ️",
+  recommend: "❤️"
 };
 
 var CONTEXT_MENU_START_ITEM = {
@@ -45,6 +47,12 @@ var CONTEXT_MENU_SECONDARY_ITEMS = [
     tab: "about",
     emoji: ACTION_MENU_EMOJI.about,
     title: (strings) => strings.tabAbout
+  },
+  {
+    id: CONTEXT_MENU_RECOMMEND,
+    tab: "recommend",
+    emoji: ACTION_MENU_EMOJI.recommend,
+    title: (strings) => strings.tabRecommend
   }
 ];
 
@@ -91,4 +99,4 @@ function findContextMenuTab(menuItemId) {
   return CONTEXT_MENU_SECONDARY_ITEMS.find((item) => item.id === menuItemId)?.tab;
 }
 
-export { ACTION_MENU_EMOJI, CONTEXT_MENU_ABOUT, CONTEXT_MENU_COPIED, CONTEXT_MENU_COPIED_ITEM, CONTEXT_MENU_SECONDARY_ITEMS, CONTEXT_MENU_SETTINGS, CONTEXT_MENU_START, CONTEXT_MENU_START_ITEM, actionMenuTitle, createContextMenuItem, ensureContextMenu, ensureContextMenuChain, findContextMenuTab };
+export { ACTION_MENU_EMOJI, CONTEXT_MENU_ABOUT, CONTEXT_MENU_COPIED, CONTEXT_MENU_COPIED_ITEM, CONTEXT_MENU_RECOMMEND, CONTEXT_MENU_SECONDARY_ITEMS, CONTEXT_MENU_SETTINGS, CONTEXT_MENU_START, CONTEXT_MENU_START_ITEM, actionMenuTitle, createContextMenuItem, ensureContextMenu, ensureContextMenuChain, findContextMenuTab };

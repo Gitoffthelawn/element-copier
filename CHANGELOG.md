@@ -6,6 +6,10 @@ Regular SemVer logic. Review the [release requirements](RELEASE.md).
 
 ## RELEASES
 
+### 1.6.0
+- Added a Recommend page with direct Chrome and Firefox store actions to open, copy, or share the extension link.
+- Added Recommend as the last item in the extension panel and toolbar context menus.
+
 ### 1.5.0
 - Fixed Firefox popup launches targeting a previously used tab instead of the current active tab.
 - Unified PNG and JPEG generation on a single canvas across browsers, fixing image generation in Firefox.

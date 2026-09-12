@@ -2017,4 +2017,19 @@ export const PANEL_CSS = `.ec-panel-header,
   background: rgba(37, 99, 235, 0.28);
   color: #dbeafe;
 }
+.ec-panel-page--recommend { display: flex; flex-direction: column; gap: 0.9rem; width: 100%; }
+.ec-recommend-intro { margin: 0; color: #4b5563; }
+.ec-recommend-store-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.ec-recommend-store-row { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; min-height: 3.35rem; padding: 0.55rem 0.65rem 0.55rem 0.85rem; border: 1px solid rgba(37, 99, 235, 0.18); border-radius: 0.65rem; background: rgba(255,255,255,0.62); }
+.ec-recommend-store-name { font-weight: 600; color: #374151; }
+.ec-recommend-store-actions { display: flex; gap: 0.25rem; }
+.ec-recommend-icon-button { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 2.15rem; height: 2.15rem; margin: 0; padding: 0; border: none; border-radius: 0.4rem; color: #4b5563; background: transparent; cursor: pointer; }
+.ec-recommend-icon-button svg { display: block; width: 1.1rem; height: 1.1rem; }
+.ec-recommend-icon-button:hover, .ec-recommend-icon-button:focus-visible { color: #2563eb; background: rgba(37, 99, 235, 0.1); }
+.ec-recommend-icon-button::after { content: attr(data-tooltip); position: absolute; z-index: 10; inset-inline-end: 0; bottom: calc(100% + 0.35rem); width: max-content; max-width: 12rem; padding: 0.3rem 0.45rem; border-radius: 0.3rem; color: #fff; background: #1f2937; font-size: 0.72rem; line-height: 1.2; pointer-events: none; opacity: 0; transform: translateY(0.15rem); transition: opacity 120ms ease, transform 120ms ease; }
+.ec-recommend-icon-button:hover::after, .ec-recommend-icon-button:focus-visible::after { opacity: 1; transform: translateY(0); }
+.ec-recommend-status { min-height: 1.1em; color: #166534; font-size: 0.82rem; }
+:host(.ec-panel-popup--dark) .ec-recommend-intro, :host(.ec-panel-popup--dark) .ec-recommend-store-name { color: #d1d5db; }
+:host(.ec-panel-popup--dark) .ec-recommend-store-row { background: rgba(17,24,39,0.52); border-color: rgba(96,165,250,0.24); }
+:host(.ec-panel-popup--dark) .ec-recommend-icon-button { color: #d1d5db; }
 `;

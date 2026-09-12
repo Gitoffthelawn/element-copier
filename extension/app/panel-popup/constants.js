@@ -20,7 +20,8 @@ var PANEL_MENU_TABS = [
   "start",
   "copied",
   "settings",
-  "about"
+  "about",
+  "recommend"
 ];
 
 var PANEL_POPUP_TABS = [...PANEL_MENU_TABS, "loading"];

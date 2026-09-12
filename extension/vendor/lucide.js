@@ -50,8 +50,10 @@ var PLAY = lucideUiIcon(play_default);
 var PUZZLE = lucideUiIcon(puzzle_default);
 var ROTATE_CW = lucideUiIcon(rotate_cw_default);
 var SETTINGS = lucideUiIcon(settings_default);
+var HEART_HANDSHAKE = lucideUiIcon(`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg>`);
+var SHARE = lucideUiIcon(`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v13"/><path d="m16 6-4-4-4 4"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/></svg>`);
 var SHIELD_CHECK = lucideUiIcon(shield_check_default);
 var SQUARE_CHECK = lucideUiIcon(square_check_default);
 var TERMINAL = lucideUiIcon(terminal_default);
 
-export { stripComment, lucideUiIcon, ARROW_UP, CHART_COLUMN_INCREASING, CIRCLE_POWER, COG, COPY, EXTERNAL_LINK, FILE_DOWN, FILES, GIT_FORK, HEART, HISTORY, IMAGE_DOWN, IMAGES, INFO, KEYBOARD, PIN, PLAY, PUZZLE, ROTATE_CW, SETTINGS, SHIELD_CHECK, SQUARE_CHECK, TERMINAL };
+export { stripComment, lucideUiIcon, ARROW_UP, CHART_COLUMN_INCREASING, CIRCLE_POWER, COG, COPY, EXTERNAL_LINK, FILE_DOWN, FILES, GIT_FORK, HEART, HEART_HANDSHAKE, HISTORY, IMAGE_DOWN, IMAGES, INFO, KEYBOARD, PIN, PLAY, PUZZLE, ROTATE_CW, SETTINGS, SHARE, SHIELD_CHECK, SQUARE_CHECK, TERMINAL };

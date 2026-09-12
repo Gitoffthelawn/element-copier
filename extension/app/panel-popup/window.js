@@ -8,6 +8,7 @@ import { notifyCopyPage, notifyPanelClosed, notifyPanelTabChanged, notifyStartPi
 import { setLocale } from "../storage.js";
 import { syncPanelThemeFromStorage } from "./panel-theme.js";
 import { t } from "../i18n/strings.js";
+import { buildRecommendPanelBody } from "../recommend.js";
 
 function isMenuTab(tab) {
   return PANEL_MENU_TABS.includes(tab);
@@ -126,6 +127,9 @@ var CopierPanelWindow = class {
         break;
       case "about":
         buildAboutPanelBody(this.body, strings);
+        break;
+      case "recommend":
+        buildRecommendPanelBody(this.body, strings);
         break;
       case "loading":
         buildLoadingPanelBody(this.body, strings);

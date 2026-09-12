@@ -1,4 +1,4 @@
-import { FILES, INFO, PLAY, SETTINGS } from "../../vendor/lucide.js";
+import { FILES, HEART_HANDSHAKE, INFO, PLAY, SETTINGS } from "../../vendor/lucide.js";
 
 var START_ITEM = {
   tab: "start",
@@ -14,7 +14,8 @@ var COPIED_ITEM = {
 
 var SECONDARY_MENU_ITEMS = [
   { tab: "settings", iconSvg: SETTINGS, label: (s) => s.pageSettingsTitle },
-  { tab: "about", iconSvg: INFO, label: (s) => s.tabAbout }
+  { tab: "about", iconSvg: INFO, label: (s) => s.tabAbout },
+  { tab: "recommend", iconSvg: HEART_HANDSHAKE, label: (s) => s.tabRecommend }
 ];
 
 function resolvePrimaryItem(hasCache) {

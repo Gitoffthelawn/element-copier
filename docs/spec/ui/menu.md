@@ -10,6 +10,7 @@
    - files // COPIED -- if the cache is not empty
 - settings // SETTINGS
 - info // ABOUT
+- heart-handshake // RECOMMEND, always last
 
 ### Does not contain
 - Welcome
