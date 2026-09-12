@@ -160,7 +160,7 @@ function buildAboutPanelBody(body, strings) {
   page.className = "ec-panel-page ec-panel-page--about";
   const title = document.createElement("h2");
   title.className = "ec-panel-page-title";
-  title.textContent = strings.aboutPageTitle ?? "ELEMENT COPIER";
+  title.textContent = strings.tabAbout;
   const items = buildAboutListItems(strings);
   function section(heading, iconHtml, entries) {
     const block = document.createElement("section");
